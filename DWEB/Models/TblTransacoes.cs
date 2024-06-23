@@ -15,11 +15,19 @@ namespace Orcamento.Models
 
         public string Descricao { get; set; }
 
+        public double ValorTransacao { get; set; }
 
-        //FALTA A PARTE DAS FKs
-        public double Valor { get; set; }
 
+        
+        [ForeignKey(nameof(MoedaID))]
+        [Display(Name = "Moeda associada")]
+        public int Moeda { get; set; }
+        public TblMoedas MoedaID { get; set; }
+
+        [ForeignKey(nameof(CategoriaID))]
+        [Display(Name = "Categoria associada")]
         public int Categoria { get; set; }
+        public TblCategorias CategoriaID { get; set; }
 
     }
 }

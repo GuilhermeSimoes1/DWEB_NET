@@ -11,8 +11,9 @@ namespace Orcamento.Models
 
         public string Nome { get; set; }
 
-        //FALTA A PARTE DA FK
-        public double Valor { get; set; }
+        public string abreviatura { get; set; }
+
+        public double TaxaDeCambio { get; set; }
 
     }
 }

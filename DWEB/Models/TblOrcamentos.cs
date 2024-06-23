@@ -11,12 +11,14 @@ namespace Orcamento.Models
 
         public DateTime DataInicial { get; set; }
 
-        public string DataFinal { get; set; }
+        public DateTime DataFinal { get; set; }
 
+        public string ValorOrcamento { get; set; }
 
-        //Falta a parte das FKs
-        public string Valor { get; set; }
-
+        [ForeignKey(nameof(MoedaID))]
+        [Display(Name = "Moeda associada")]
         public int Moeda { get; set; }
+        public TblMoedas MoedaID { get; set; }
+
     }
 }
