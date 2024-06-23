@@ -9,17 +9,26 @@ namespace Orcamento.Models
 		[Key]
 		public int ContaID { get; set; }
 
-		public string Tipo { get; set; }
-
-		public string Saldo { get; set; }
-
-		public string Nome { get; set; }
+		
+		public string Nome { get; set; } = "Conta";
 
 		//FALTA FAZER A PARTE DAS FKs
-		public int OrcamentoFK { get; set; }
-		
-		public int Transacao { get; set; }
 
+		[ForeignKey(nameof(OrcamentoID))]
+		[Display(Name = "Orcamento associado")]
+		public int OrcamentoFK { get; set; }
+		public TblOrcamentos OrcamentoID { get; set; }
+
+
+		[ForeignKey(nameof(TransacaoID))]
+        [Display(Name = "Transacao associada")]
+        public int TransacaoFK { get; set; }
+		public TblTransacoes TransacaoID { get; set; }
+
+
+		[ForeignKey(nameof(Valor)]
+		[Display(Name = "Saldo associado")]
 		public double Saldo { get; set; }
+		public TblOrcamentos Valor { get; set; }
 	}
 }
