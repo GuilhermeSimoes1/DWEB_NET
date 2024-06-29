@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace Orcamento.Models
+namespace DWEB.Models
 {
 	public class TblContas
 	{
@@ -10,22 +10,17 @@ namespace Orcamento.Models
 		public int ContaID { get; set; }
 
 		
-		public string Nome { get; set; } = "Conta";
+		public string NomeConta { get; set; } = "Conta";
 
 
-		public double SaldoConta { get; set; }
+		public double Saldo { get; set; }
 
 
-		[ForeignKey(nameof(OrcamentoID))]
+		[ForeignKey(nameof(UserID))]
 		[Display(Name = "Orcamento associado")]
-		public int OrcamentoFK { get; set; }
-		public TblOrcamentos OrcamentoID { get; set; }
+		public int UserFK { get; set; }
+		public TblUtilizadores UserID { get; set; }
 
-
-		[ForeignKey(nameof(TransacaoID))]
-        [Display(Name = "Transacao associada")]
-        public int TransacaoFK { get; set; }
-		public TblTransacoes TransacaoID { get; set; }
 
 	}
 }

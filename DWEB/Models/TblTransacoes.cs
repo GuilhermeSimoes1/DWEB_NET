@@ -1,33 +1,46 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
-namespace Orcamento.Models
+namespace DWEB.Models
 {
     public class TblTransacoes
     {
         [Key]
         public int TransacaoID { get; set; }
 
-        public DateTime Data { get; set; }
+        public DateTime DataTime { get; set; }
 
-        public string Tipo { get; set; }
+       
+        public enum Tipo
+        {
+            Ganho,
+            Gasto
+        }
 
+        [StringLength(100)]
         public string Descricao { get; set; }
 
         public double ValorTransacao { get; set; }
 
-
-        
-        [ForeignKey(nameof(MoedaID))]
-        [Display(Name = "Moeda associada")]
-        public int Moeda { get; set; }
-        public TblMoedas MoedaID { get; set; }
+        [ForeignKey(nameof(ContaID))]
+        [Display(Name = "Conta associada")]
+        public int ContaFK { get; set; }
+        public TblContas ContaID { get; set; }
 
         [ForeignKey(nameof(CategoriaID))]
         [Display(Name = "Categoria associada")]
-        public int Categoria { get; set; }
+        public int CategoriaFK { get; set; }
         public TblCategorias CategoriaID { get; set; }
 
+        [ForeignKey(nameof(UserID))]
+        [Display(Name = "Utilizador associado")]
+        public int UserFK { get; set; }
+        public TblUtilizadores UserID { get; set; }
+
+        [ForeignKey(nameof(Saldo))]
+        [Display(Name = "Saldo associado")]
+        public double SaldoFK { get; set; }
+        public TblContas Saldo { get; set; }
     }
 }
