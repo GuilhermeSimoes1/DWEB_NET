@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DWEB_NET.props" />
+</Project>
