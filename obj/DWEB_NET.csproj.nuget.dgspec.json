@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET_TRUE\\DWEB_NET\\DWEB_NET.csproj": {}
+    "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\DWEB_NET.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET_TRUE\\DWEB_NET\\DWEB_NET.csproj": {
+    "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\DWEB_NET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET_TRUE\\DWEB_NET\\DWEB_NET.csproj",
+        "projectUniqueName": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\DWEB_NET.csproj",
         "projectName": "DWEB_NET",
-        "projectPath": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET_TRUE\\DWEB_NET\\DWEB_NET.csproj",
+        "projectPath": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\DWEB_NET.csproj",
         "packagesPath": "C:\\Users\\Gui\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET_TRUE\\DWEB_NET\\obj\\",
+        "outputPath": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gui\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -62,6 +62,12 @@
               "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.2, )"
             }

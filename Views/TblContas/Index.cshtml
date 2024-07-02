@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DWEB_NET.Models.TblContas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeConta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Saldo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeConta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Saldo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ContaID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ContaID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ContaID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
