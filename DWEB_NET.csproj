@@ -4,65 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-DWEB_NET-dd1e9fa0-b866-4f61-9cd4-0ff0bf3851e4</UserSecretsId>
+    <UserSecretsId>aspnet-DWEB_NET-c6819a10-4753-48e1-948e-97a400b23043</UserSecretsId>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="css\**" />
-    <Compile Remove="Models\ViewModels\**" />
-    <Compile Remove="Views\Dashboard\**" />
-    <Compile Remove="Views\NovaPasta1\**" />
-    <Compile Remove="Views\NovaPasta\**" />
-    <Compile Remove="Views\TblCategorias\**" />
-    <Compile Remove="Views\TblContas\**" />
-    <Compile Remove="Views\TblMoedas\**" />
-    <Compile Remove="Views\TblOrcamentos\**" />
-    <Compile Remove="Views\TblTransacoesCategorias\**" />
-    <Compile Remove="Views\TblTransacoes\**" />
-    <Compile Remove="Views\TblUtilizadores\**" />
-    <Content Remove="css\**" />
-    <Content Remove="Models\ViewModels\**" />
-    <Content Remove="Views\Dashboard\**" />
-    <Content Remove="Views\NovaPasta1\**" />
-    <Content Remove="Views\NovaPasta\**" />
-    <Content Remove="Views\TblCategorias\**" />
-    <Content Remove="Views\TblContas\**" />
-    <Content Remove="Views\TblMoedas\**" />
-    <Content Remove="Views\TblOrcamentos\**" />
-    <Content Remove="Views\TblTransacoesCategorias\**" />
-    <Content Remove="Views\TblTransacoes\**" />
-    <Content Remove="Views\TblUtilizadores\**" />
-    <EmbeddedResource Remove="css\**" />
-    <EmbeddedResource Remove="Models\ViewModels\**" />
-    <EmbeddedResource Remove="Views\Dashboard\**" />
-    <EmbeddedResource Remove="Views\NovaPasta1\**" />
-    <EmbeddedResource Remove="Views\NovaPasta\**" />
-    <EmbeddedResource Remove="Views\TblCategorias\**" />
-    <EmbeddedResource Remove="Views\TblContas\**" />
-    <EmbeddedResource Remove="Views\TblMoedas\**" />
-    <EmbeddedResource Remove="Views\TblOrcamentos\**" />
-    <EmbeddedResource Remove="Views\TblTransacoesCategorias\**" />
-    <EmbeddedResource Remove="Views\TblTransacoes\**" />
-    <EmbeddedResource Remove="Views\TblUtilizadores\**" />
-    <None Remove="css\**" />
-    <None Remove="Models\ViewModels\**" />
-    <None Remove="Views\Dashboard\**" />
-    <None Remove="Views\NovaPasta1\**" />
-    <None Remove="Views\NovaPasta\**" />
-    <None Remove="Views\TblCategorias\**" />
-    <None Remove="Views\TblContas\**" />
-    <None Remove="Views\TblMoedas\**" />
-    <None Remove="Views\TblOrcamentos\**" />
-    <None Remove="Views\TblTransacoesCategorias\**" />
-    <None Remove="Views\TblTransacoes\**" />
-    <None Remove="Views\TblUtilizadores\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Controllers\DashboardController.cs" />
-    <Compile Remove="Controllers\TblMoedasController.cs" />
-    <Compile Remove="Models\TblMoedas.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.2" />
@@ -76,39 +19,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\TblCategorias\Create.cshtml" />
-    <None Include="Views\TblCategorias\Delete.cshtml" />
-    <None Include="Views\TblCategorias\Details.cshtml" />
-    <None Include="Views\TblCategorias\Edit.cshtml" />
-    <None Include="Views\TblCategorias\Index.cshtml" />
-    <None Include="Views\TblContas\Create.cshtml" />
-    <None Include="Views\TblContas\Delete.cshtml" />
-    <None Include="Views\TblContas\Details.cshtml" />
-    <None Include="Views\TblContas\Edit.cshtml" />
-    <None Include="Views\TblContas\Index.cshtml" />
-    <None Include="Views\TblOrcamentos\Create.cshtml" />
-    <None Include="Views\TblOrcamentos\Delete.cshtml" />
-    <None Include="Views\TblOrcamentos\Details.cshtml" />
-    <None Include="Views\TblOrcamentos\Edit.cshtml" />
-    <None Include="Views\TblOrcamentos\Index.cshtml" />
-    <None Include="Views\TblTransacoesCategorias\Create.cshtml" />
-    <None Include="Views\TblTransacoesCategorias\Delete.cshtml" />
-    <None Include="Views\TblTransacoesCategorias\Details.cshtml" />
-    <None Include="Views\TblTransacoesCategorias\Edit.cshtml" />
-    <None Include="Views\TblTransacoesCategorias\Index.cshtml" />
-    <None Include="Views\TblTransacoes\Create.cshtml" />
-    <None Include="Views\TblTransacoes\Delete.cshtml" />
-    <None Include="Views\TblTransacoes\Details.cshtml" />
-    <None Include="Views\TblTransacoes\Edit.cshtml" />
-    <None Include="Views\TblTransacoes\Index.cshtml" />
-    <None Include="Views\TblUtilizadores\Create.cshtml" />
-    <None Include="Views\TblUtilizadores\Delete.cshtml" />
-    <None Include="Views\TblUtilizadores\Details.cshtml" />
-    <None Include="Views\TblUtilizadores\Edit.cshtml" />
-    <None Include="Views\TblUtilizadores\Index.cshtml" />
   </ItemGroup>
 
 </Project>

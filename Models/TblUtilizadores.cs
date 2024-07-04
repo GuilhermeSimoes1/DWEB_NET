@@ -26,18 +26,14 @@ namespace DWEB_NET.Models
         [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
         public string Email { get; set; }
 
-        [StringLength(20)]
-        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
-        public string Passwd { get; set; }
+
+        public string? FirstName { get; set; }
 
         [StringLength(30)]
-        public string FirstName { get; set; }
-
-        [StringLength(30)]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [StringLength(255)]
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
 
 
         /// <summary>

@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace DWEB_NET.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InicialMigration : Migration
+    public partial class RestruturaçãoDaBD : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,19 +27,6 @@ namespace DWEB_NET.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Moedas",
-                columns: table => new
-                {
-                    MoedaID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    NomeMoeda = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Moedas", x => x.MoedaID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Utilizadores",
                 columns: table => new
                 {
@@ -45,10 +34,10 @@ namespace DWEB_NET.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Passwd = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Descricao = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: true),
+                    Descricao = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    UserAutent = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,7 +51,7 @@ namespace DWEB_NET.Data.Migrations
                     ContaID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NomeConta = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Saldo = table.Column<double>(type: "float", nullable: false),
+                    Saldo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     UserFK = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -83,10 +72,10 @@ namespace DWEB_NET.Data.Migrations
                     OrcamentoID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NomeOrcamento = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    ValorNecessario = table.Column<double>(type: "float", nullable: false),
+                    ValorNecessario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DataInicial = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataFinal = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ValorAtual = table.Column<double>(type: "float", nullable: false),
+                    DataFinal = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ValorAtual = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     UserFK = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -107,8 +96,8 @@ namespace DWEB_NET.Data.Migrations
                     TransacaoID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DataTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Descricao = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    ValorTransacao = table.Column<double>(type: "float", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    ValorTransacao = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     ContaFK = table.Column<int>(type: "int", nullable: false),
                     CategoriaFK = table.Column<int>(type: "int", nullable: false),
                     UserFK = table.Column<int>(type: "int", nullable: false)
@@ -160,6 +149,21 @@ namespace DWEB_NET.Data.Migrations
                         onDelete: ReferentialAction.NoAction);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Categorias",
+                columns: new[] { "CategoriaID", "NomeCategoria" },
+                values: new object[,]
+                {
+                    { 1, "Saúde" },
+                    { 2, "Lazer" },
+                    { 3, "Casa" },
+                    { 4, "Educação" },
+                    { 5, "Alimentação" },
+                    { 6, "Outros" },
+                    { 7, "Salário" },
+                    { 8, "Investimentos" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Contas_UserFK",
                 table: "Contas",
@@ -194,9 +198,6 @@ namespace DWEB_NET.Data.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Moedas");
-
             migrationBuilder.DropTable(
                 name: "Orcamentos");
 

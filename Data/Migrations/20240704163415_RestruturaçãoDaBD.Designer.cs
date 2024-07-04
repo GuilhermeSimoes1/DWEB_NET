@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DWEB_NET.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240704115749_SegundaMigracao")]
-    partial class SegundaMigracao
+    [Migration("20240704163415_RestruturaçãoDaBD")]
+    partial class RestruturaçãoDaBD
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -206,7 +206,6 @@ namespace DWEB_NET.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"));
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -216,19 +215,11 @@ namespace DWEB_NET.Data.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Passwd")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("UserAutent")
                         .IsRequired()
