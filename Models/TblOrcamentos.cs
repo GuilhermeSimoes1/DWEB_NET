@@ -10,15 +10,15 @@ namespace DWEB_NET.Models
         public int OrcamentoID { get; set; }
 
         [StringLength(100)]
-        public string NomeOrcamento {  get; set; }
+        public required string NomeOrcamento {  get; set; }
 
-        public double ValorNecessario { get; set; }
+        public required double ValorNecessario { get; set; }
 
         public DateTime DataInicial { get; set; }
 
-        public DateTime DataFinal { get; set; }
+        public DateTime? DataFinal { get; set; }
 
-        public double ValorAtual { get; set; }
+        public double ValorAtual { get; set; } = 0;
 
         [ForeignKey(nameof(UserID))]
         [Display(Name = "Utilizador associado")]

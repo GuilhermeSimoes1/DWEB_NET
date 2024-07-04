@@ -20,6 +20,11 @@ namespace DWEB_NET.Controllers
         }
 
         // GET: TblUtilizadores
+        public IActionResult Signup()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Index()
         {
             return View(await _context.Utilizadores.ToListAsync());

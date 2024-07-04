@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|solutionrelative:models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|solutionrelative:models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblcontas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|solutionrelative:models\\tblcontas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|solutionrelative:models\\tblcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tbltransacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|solutionrelative:models\\tbltransacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tbltransacoescategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82F7B0FB-F4F1-4CA9-8795-E67801BE4C37}|DWEB_NET.csproj|solutionrelative:models\\tbltransacoescategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TblUtilizadores.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblUtilizadores.cs",
+              "RelativeDocumentMoniker": "Models\\TblUtilizadores.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblUtilizadores.cs",
+              "RelativeToolTip": "Models\\TblUtilizadores.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAkwAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T01:38:34.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TblOrcamentos.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblOrcamentos.cs",
+              "RelativeDocumentMoniker": "Models\\TblOrcamentos.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblOrcamentos.cs",
+              "RelativeToolTip": "Models\\TblOrcamentos.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T01:38:05.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TblContas.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblContas.cs",
+              "RelativeDocumentMoniker": "Models\\TblContas.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblContas.cs",
+              "RelativeToolTip": "Models\\TblContas.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T01:37:37.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TblCategorias.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblCategorias.cs",
+              "RelativeDocumentMoniker": "Models\\TblCategorias.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblCategorias.cs",
+              "RelativeToolTip": "Models\\TblCategorias.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T01:37:24.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TblTransacoes.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoes.cs",
+              "RelativeDocumentMoniker": "Models\\TblTransacoes.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoes.cs",
+              "RelativeToolTip": "Models\\TblTransacoes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T01:37:16.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TblTransacoesCategorias.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoesCategorias.cs",
+              "RelativeDocumentMoniker": "Models\\TblTransacoesCategorias.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoesCategorias.cs",
+              "RelativeToolTip": "Models\\TblTransacoesCategorias.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T01:36:33.86Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,13 @@ namespace DWEB_NET.Models
 {
     public class TblTransacoes
     {
+
+        public TblTransacoes()
+        {
+            ListaTransacoesCategorias = new HashSet<TblTransacoesCategorias>();
+        }
+
+
         [Key]
         public int TransacaoID { get; set; }
 
@@ -19,9 +26,10 @@ namespace DWEB_NET.Models
         }
 
         [StringLength(100)]
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
 
-        public double ValorTransacao { get; set; }
+        public required double ValorTransacao { get; set; }
+
 
         [ForeignKey(nameof(ContaID))]
         [Display(Name = "Conta associada")]
@@ -37,6 +45,10 @@ namespace DWEB_NET.Models
         [Display(Name = "Utilizador associado")]
         public int UserFK { get; set; }
         public TblUtilizadores UserID { get; set; }
+
+
+        // Coleção de categorias associadas à transação
+        public ICollection<TblTransacoesCategorias> ListaTransacoesCategorias { get; set; }
 
 
     }

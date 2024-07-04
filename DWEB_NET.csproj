@@ -8,25 +8,74 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="css\**" />
+    <Compile Remove="Models\ViewModels\**" />
+    <Compile Remove="Views\Dashboard\**" />
     <Compile Remove="Views\NovaPasta1\**" />
     <Compile Remove="Views\NovaPasta\**" />
+    <Compile Remove="Views\TblCategorias\**" />
+    <Compile Remove="Views\TblContas\**" />
+    <Compile Remove="Views\TblMoedas\**" />
+    <Compile Remove="Views\TblOrcamentos\**" />
+    <Compile Remove="Views\TblTransacoesCategorias\**" />
+    <Compile Remove="Views\TblTransacoes\**" />
+    <Compile Remove="Views\TblUtilizadores\**" />
+    <Content Remove="css\**" />
+    <Content Remove="Models\ViewModels\**" />
+    <Content Remove="Views\Dashboard\**" />
     <Content Remove="Views\NovaPasta1\**" />
     <Content Remove="Views\NovaPasta\**" />
+    <Content Remove="Views\TblCategorias\**" />
+    <Content Remove="Views\TblContas\**" />
+    <Content Remove="Views\TblMoedas\**" />
+    <Content Remove="Views\TblOrcamentos\**" />
+    <Content Remove="Views\TblTransacoesCategorias\**" />
+    <Content Remove="Views\TblTransacoes\**" />
+    <Content Remove="Views\TblUtilizadores\**" />
+    <EmbeddedResource Remove="css\**" />
+    <EmbeddedResource Remove="Models\ViewModels\**" />
+    <EmbeddedResource Remove="Views\Dashboard\**" />
     <EmbeddedResource Remove="Views\NovaPasta1\**" />
     <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="Views\TblCategorias\**" />
+    <EmbeddedResource Remove="Views\TblContas\**" />
+    <EmbeddedResource Remove="Views\TblMoedas\**" />
+    <EmbeddedResource Remove="Views\TblOrcamentos\**" />
+    <EmbeddedResource Remove="Views\TblTransacoesCategorias\**" />
+    <EmbeddedResource Remove="Views\TblTransacoes\**" />
+    <EmbeddedResource Remove="Views\TblUtilizadores\**" />
+    <None Remove="css\**" />
+    <None Remove="Models\ViewModels\**" />
+    <None Remove="Views\Dashboard\**" />
     <None Remove="Views\NovaPasta1\**" />
     <None Remove="Views\NovaPasta\**" />
+    <None Remove="Views\TblCategorias\**" />
+    <None Remove="Views\TblContas\**" />
+    <None Remove="Views\TblMoedas\**" />
+    <None Remove="Views\TblOrcamentos\**" />
+    <None Remove="Views\TblTransacoesCategorias\**" />
+    <None Remove="Views\TblTransacoes\**" />
+    <None Remove="Views\TblUtilizadores\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Controllers\DashboardController.cs" />
+    <Compile Remove="Controllers\TblCategoriasController.cs" />
+    <Compile Remove="Controllers\TblContasController.cs" />
+    <Compile Remove="Controllers\TblMoedasController.cs" />
+    <Compile Remove="Controllers\TblOrcamentosController.cs" />
+    <Compile Remove="Controllers\TblTransacoesCategoriasController.cs" />
+    <Compile Remove="Controllers\TblTransacoesController.cs" />
+    <Compile Remove="Controllers\TblUtilizadoresController.cs" />
+    <Compile Remove="Models\TblMoedas.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

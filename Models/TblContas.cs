@@ -7,7 +7,11 @@ namespace DWEB_NET.Models
 {
 	public class TblContas
 	{
-		public TblContas() { TransacoesList = new HashSet<TblTransacoes>(); }
+		public TblContas() { 
+
+			ListaTransacoes = new HashSet<TblTransacoes>(); 
+		
+		}
 
 		[Key]
 		public int ContaID { get; set; }
@@ -17,13 +21,13 @@ namespace DWEB_NET.Models
 
 
 		public double Saldo { get; set; }
-        public ICollection<TblTransacoes> TransacoesList { get; set; }
+        
 
         [ForeignKey(nameof(UserID))]
-		[Display(Name = "Orcamento associado")]
+		[Display(Name = "Utilizador associado")]
 		public int UserFK { get; set; }
 		public TblUtilizadores UserID { get; set; }
 
-
-	}
+        public ICollection<TblTransacoes> ListaTransacoes { get; set; }
+    }
 }
