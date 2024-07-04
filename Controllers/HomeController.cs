@@ -13,6 +13,17 @@ namespace DWEB_NET.Controllers
             _logger = logger;
         }
 
+
+        public IActionResult Hero()
+        {
+            return View();
+        }
+
+        public IActionResult Informacoes()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();

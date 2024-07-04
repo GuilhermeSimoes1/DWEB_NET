@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\DWEB_NET.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\css\\Hero.css",
+      "PackagePath": "staticwebassets\\css\\Hero.css"
+    },
+    {
+      "Id": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\css\\Informacoes.css",
+      "PackagePath": "staticwebassets\\css\\Informacoes.css"
+    },
+    {
       "Id": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

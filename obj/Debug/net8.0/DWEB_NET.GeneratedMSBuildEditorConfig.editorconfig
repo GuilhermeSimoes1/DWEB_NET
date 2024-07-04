@@ -62,8 +62,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Hero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIZXJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Informacoes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmZvcm1hY29lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Privacy.cshtml]
