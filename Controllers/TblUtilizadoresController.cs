@@ -20,11 +20,6 @@ namespace DWEB_NET.Controllers
         }
 
         // GET: TblUtilizadores
-        public IActionResult Signup()
-        {
-            return View();
-        }
-
         public async Task<IActionResult> Index()
         {
             return View(await _context.Utilizadores.ToListAsync());
@@ -59,7 +54,7 @@ namespace DWEB_NET.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserID,UserName,Email,Passwd,FirstName,LastName,Descricao")] TblUtilizadores tblUtilizadores)
+        public async Task<IActionResult> Create([Bind("UserID,UserName,Email,Passwd,FirstName,LastName,Descricao,UserAutent")] TblUtilizadores tblUtilizadores)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +86,7 @@ namespace DWEB_NET.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserID,UserName,Email,Passwd,FirstName,LastName,Descricao")] TblUtilizadores tblUtilizadores)
+        public async Task<IActionResult> Edit(int id, [Bind("UserID,UserName,Email,Passwd,FirstName,LastName,Descricao,UserAutent")] TblUtilizadores tblUtilizadores)
         {
             if (id != tblUtilizadores.UserID)
             {

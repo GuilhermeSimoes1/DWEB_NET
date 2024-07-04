@@ -1,7 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static DWEB_NET.Models.TblTransacoes;
-
 
 namespace DWEB_NET.Models
 {
@@ -20,7 +18,7 @@ namespace DWEB_NET.Models
 		public string NomeConta { get; set; } = "Conta";
 
 
-		public double Saldo { get; set; }
+		public decimal Saldo { get; set; }
         
 
         [ForeignKey(nameof(UserID))]

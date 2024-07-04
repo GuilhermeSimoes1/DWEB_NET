@@ -60,13 +60,7 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\DashboardController.cs" />
-    <Compile Remove="Controllers\TblCategoriasController.cs" />
-    <Compile Remove="Controllers\TblContasController.cs" />
     <Compile Remove="Controllers\TblMoedasController.cs" />
-    <Compile Remove="Controllers\TblOrcamentosController.cs" />
-    <Compile Remove="Controllers\TblTransacoesCategoriasController.cs" />
-    <Compile Remove="Controllers\TblTransacoesController.cs" />
-    <Compile Remove="Controllers\TblUtilizadoresController.cs" />
     <Compile Remove="Models\TblMoedas.cs" />
   </ItemGroup>
 
@@ -74,13 +68,47 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\TblCategorias\Create.cshtml" />
+    <None Include="Views\TblCategorias\Delete.cshtml" />
+    <None Include="Views\TblCategorias\Details.cshtml" />
+    <None Include="Views\TblCategorias\Edit.cshtml" />
+    <None Include="Views\TblCategorias\Index.cshtml" />
+    <None Include="Views\TblContas\Create.cshtml" />
+    <None Include="Views\TblContas\Delete.cshtml" />
+    <None Include="Views\TblContas\Details.cshtml" />
+    <None Include="Views\TblContas\Edit.cshtml" />
+    <None Include="Views\TblContas\Index.cshtml" />
+    <None Include="Views\TblOrcamentos\Create.cshtml" />
+    <None Include="Views\TblOrcamentos\Delete.cshtml" />
+    <None Include="Views\TblOrcamentos\Details.cshtml" />
+    <None Include="Views\TblOrcamentos\Edit.cshtml" />
+    <None Include="Views\TblOrcamentos\Index.cshtml" />
+    <None Include="Views\TblTransacoesCategorias\Create.cshtml" />
+    <None Include="Views\TblTransacoesCategorias\Delete.cshtml" />
+    <None Include="Views\TblTransacoesCategorias\Details.cshtml" />
+    <None Include="Views\TblTransacoesCategorias\Edit.cshtml" />
+    <None Include="Views\TblTransacoesCategorias\Index.cshtml" />
+    <None Include="Views\TblTransacoes\Create.cshtml" />
+    <None Include="Views\TblTransacoes\Delete.cshtml" />
+    <None Include="Views\TblTransacoes\Details.cshtml" />
+    <None Include="Views\TblTransacoes\Edit.cshtml" />
+    <None Include="Views\TblTransacoes\Index.cshtml" />
+    <None Include="Views\TblUtilizadores\Create.cshtml" />
+    <None Include="Views\TblUtilizadores\Delete.cshtml" />
+    <None Include="Views\TblUtilizadores\Details.cshtml" />
+    <None Include="Views\TblUtilizadores\Edit.cshtml" />
+    <None Include="Views\TblUtilizadores\Index.cshtml" />
   </ItemGroup>
 
 </Project>

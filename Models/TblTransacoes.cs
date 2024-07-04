@@ -28,7 +28,7 @@ namespace DWEB_NET.Models
         [StringLength(100)]
         public string? Descricao { get; set; }
 
-        public required double ValorTransacao { get; set; }
+        public required decimal ValorTransacao { get; set; }
 
 
         [ForeignKey(nameof(ContaID))]

@@ -12,13 +12,13 @@ namespace DWEB_NET.Models
         [StringLength(100)]
         public required string NomeOrcamento {  get; set; }
 
-        public required double ValorNecessario { get; set; }
+        public required decimal ValorNecessario { get; set; }
 
         public DateTime DataInicial { get; set; }
 
         public DateTime? DataFinal { get; set; }
 
-        public double ValorAtual { get; set; } = 0;
+        public decimal ValorAtual { get; set; } = 0;
 
         [ForeignKey(nameof(UserID))]
         [Display(Name = "Utilizador associado")]
