@@ -10,20 +10,20 @@ namespace DWEB_NET.Models
     {
         
         
-            [ForeignKey(nameof(TransacaoID))]
+            [ForeignKey(nameof(Transacao))]
             [Display(Name = "Transacao associada")]
             public int TransacaoFK { get; set; }
 
-            public TblTransacoes TransacaoID { get; set; }
+            public TblTransacoes Transacao { get; set; }
 
             
 
-            [ForeignKey(nameof(CategoriaID))]
+            [ForeignKey(nameof(Categoria))]
             [Display(Name = "Categoria associada")]
             public int CategoriaFK { get; set; }
-            public TblCategorias CategoriaID { get; set; }
+            public TblCategorias Categoria { get; set; }
 
-            
-       
+            public decimal Valor { get; set; }  
+
     }
 }

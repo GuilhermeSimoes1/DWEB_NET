@@ -22,7 +22,7 @@ namespace DWEB_NET.Controllers
         // GET: TblContas
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Contas.Include(t => t.UserID);
+            var applicationDbContext = _context.Contas.Include(t => t.User);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,7 +35,7 @@ namespace DWEB_NET.Controllers
             }
 
             var tblContas = await _context.Contas
-                .Include(t => t.UserID)
+                .Include(t => t.User)
                 .FirstOrDefaultAsync(m => m.ContaID == id);
             if (tblContas == null)
             {
@@ -131,7 +131,7 @@ namespace DWEB_NET.Controllers
             }
 
             var tblContas = await _context.Contas
-                .Include(t => t.UserID)
+                .Include(t => t.User)
                 .FirstOrDefaultAsync(m => m.ContaID == id);
             if (tblContas == null)
             {

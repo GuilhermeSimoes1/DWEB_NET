@@ -112,6 +112,17 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
                     _context.Utilizadores.Add(utilizador);
                     await _context.SaveChangesAsync();
 
+                    // Criar uma conta principal inicial com saldo 0 para o usuário recém-registrado
+                    var contaPrincipal = new TblContas
+                    {
+                        NomeConta = "Conta Principal",
+                        Saldo = 0,
+                        UserFK = utilizador.UserID 
+                    };
+
+                    _context.Contas.Add(contaPrincipal);
+                    await _context.SaveChangesAsync();
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(

@@ -29,6 +29,9 @@
 
 .hero-section {
     background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-wireframe-geometrico-abstrato_52683-59421.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .hero-content h1 {

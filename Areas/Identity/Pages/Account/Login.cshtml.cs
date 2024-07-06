@@ -115,6 +115,8 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+
+                    returnUrl = Url.Action("Create", "TblTransacoes");
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

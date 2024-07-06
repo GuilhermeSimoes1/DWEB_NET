@@ -31,6 +31,27 @@ namespace DWEB_NET.Data
                 new TblCategorias { CategoriaID = 7, NomeCategoria = "Salário" },
                 new TblCategorias { CategoriaID = 8, NomeCategoria = "Investimentos" }
             );
+
+            modelBuilder.Entity<TblContas>(entity =>
+            {
+                entity.Property(e => e.Saldo).HasColumnType("decimal(18,2)");
+            });
+
+            modelBuilder.Entity<TblOrcamentos>(entity =>
+            {
+                entity.Property(e => e.ValorAtual).HasColumnType("decimal(18,2)");
+                entity.Property(e => e.ValorNecessario).HasColumnType("decimal(18,2)");
+            });
+
+            modelBuilder.Entity<TblTransacoes>(entity =>
+            {
+                entity.Property(e => e.ValorTransacao).HasColumnType("decimal(18,2)");
+            });
+
+            modelBuilder.Entity<TblTransacoesCategorias>(entity =>
+            {
+                entity.Property(e => e.Valor).HasColumnType("decimal(18,2)");
+            });
         }
 
 

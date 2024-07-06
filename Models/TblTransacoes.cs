@@ -6,50 +6,47 @@ namespace DWEB_NET.Models
 {
     public class TblTransacoes
     {
-
         public TblTransacoes()
         {
             ListaTransacoesCategorias = new HashSet<TblTransacoesCategorias>();
         }
 
-
-        [Key]
-        public int TransacaoID { get; set; }
-
-        public DateTime DataTime { get; set; }
-
-       
         public enum Tipo
         {
             Ganho,
             Gasto
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //Incrementa automaticamente
+        public int TransacaoID { get; set; }
+
+        public DateTime DataTime { get; set; }
+
+        public Tipo TipoTransacao { get; set; }         
+
         [StringLength(100)]
         public string? Descricao { get; set; }
 
         public required decimal ValorTransacao { get; set; }
 
-
-        [ForeignKey(nameof(ContaID))]
+        [ForeignKey(nameof(Conta))]
         [Display(Name = "Conta associada")]
         public int ContaFK { get; set; }
-        public TblContas ContaID { get; set; }
+        public TblContas Conta { get; set; }
 
-        [ForeignKey(nameof(CategoriaID))]
+        [ForeignKey(nameof(Categoria))]
         [Display(Name = "Categoria associada")]
         public int CategoriaFK { get; set; }
-        public TblCategorias CategoriaID { get; set; }
+        public TblCategorias Categoria{ get; set; }
 
-        [ForeignKey(nameof(UserID))]
+        [ForeignKey(nameof(User))]
         [Display(Name = "Utilizador associado")]
         public int UserFK { get; set; }
-        public TblUtilizadores UserID { get; set; }
+        public TblUtilizadores User { get; set; }
 
-
-        // Coleção de categorias associadas à transação
         public ICollection<TblTransacoesCategorias> ListaTransacoesCategorias { get; set; }
-
-
     }
+
+
 }

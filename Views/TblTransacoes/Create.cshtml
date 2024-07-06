@@ -1,55 +1,139 @@
-﻿@model DWEB_NET.Models.TblTransacoes
+﻿@model TblTransacoes
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar Transação";
 }
 
-<h1>Create</h1>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Criar Transação</h5>
+                    <form asp-action="Create" id="transacaoForm">
+                        
+                        <input type="hidden" asp-for="UserFK" value="@ViewBag.UserFK" />
+                       
+                        <input type="hidden" asp-for="CategoriaFK" value="@ViewBag.CategoriaFK" />
 
-<h4>TblTransacoes</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="DataTime" class="control-label"></label>
-                <input asp-for="DataTime" class="form-control" />
-                <span asp-validation-for="DataTime" class="text-danger"></span>
+                        <div class="form-group">
+                            <label asp-for="ValorTransacao" class="control-label">Valor</label>
+                            <input asp-for="ValorTransacao" class="form-control" id="ValorTransacao" type="number" step="0.01" />
+                            <span asp-validation-for="ValorTransacao" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ContaFK" class="control-label">Selecionar Conta</label>
+                            <select asp-for="ContaFK" class="form-control" asp-items="ViewBag.ContaFK" id="ContaFK"></select>
+                            <span asp-validation-for="ContaFK" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Valor da Conta</label>
+                            <input type="text" class="form-control" id="ValorConta" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="TipoTransacao" class="control-label">Tipo de Transação</label>
+                            <select id="TipoTransacao" name="TipoTransacao" asp-for="TipoTransacao" class="form-control">
+                                <option value="">Selecione o tipo de transação</option>
+                                <option value="Gasto">Gasto</option>
+                                <option value="Ganho">Ganho</option>
+                            </select>
+                            <span asp-validation-for="TipoTransacao" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" id="categorias-container" style="display:none;">
+                            <label>Categorias Selecionadas</label>
+                            <div id="categoria-valores" class="mt-2">
+                                <!-- Campos de valor das categorias serão adicionados dinamicamente aqui -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Descricao" class="control-label">Descrição</label>
+                            <input asp-for="Descricao" class="form-control" />
+                            <span asp-validation-for="Descricao" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Criar</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ValorTransacao" class="control-label"></label>
-                <input asp-for="ValorTransacao" class="form-control" />
-                <span asp-validation-for="ValorTransacao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ContaFK" class="control-label"></label>
-                <select asp-for="ContaFK" class ="form-control" asp-items="ViewBag.ContaFK"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoriaFK" class="control-label"></label>
-                <select asp-for="CategoriaFK" class ="form-control" asp-items="ViewBag.CategoriaFK"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserFK" class="control-label"></label>
-                <select asp-for="UserFK" class ="form-control" asp-items="ViewBag.UserFK"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            function updateAccountValue() {
+                var accountId = $('#ContaFK').val();
+                if (accountId) {
+                    $.ajax({
+                        url: '/TblTransacoes/GetAccountValue',
+                        data: { accountId: accountId },
+                        type: 'GET',
+                        success: function (data) {
+                            $('#ValorConta').val(data.valorConta);
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                }
+            }
+
+            $('#ContaFK').change(function () {
+                updateAccountValue();
+            });
+
+            $('#TipoTransacao').change(function () {
+                var tipoTransacao = $(this).val();
+                if (tipoTransacao) {
+                    $.ajax({
+                        url: '/TblTransacoes/GetCategoriasPorTipo',
+                        data: { tipoTransacao: tipoTransacao },
+                        type: 'GET',
+                        success: function (data) {
+                            $('#categorias').empty();
+                            $('#categoria-valores').empty();
+                            $.each(data, function (i, item) {
+                                $('#categorias').append($('<option>').text(item.nomeCategoria).attr('value', item.categoriaID));
+                                $('#categoria-valores').append(
+                                    '<div class="form-group">' +
+                                    '<label>' + item.nomeCategoria + '</label>' +
+                                    '<input type="number" class="form-control categoria-valor" name="CategoriaValores[' + item.categoriaID + ']" step="0.01" value="0" required />' +
+                                    '</div>'
+                                );
+                            });
+                            $('#categorias-container').show();
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                } else {
+                    $('#categorias').empty();
+                    $('#categoria-valores').empty();
+                    $('#categorias-container').hide();
+                }
+            });
+
+            $('#transacaoForm').submit(function (event) {
+                var totalValue = parseFloat($('#ValorTransacao').val());
+                var categoryValues = 0;
+
+                $('.categoria-valor').each(function () {
+                    var val = parseFloat($(this).val()) || 0;
+                    categoryValues += val;
+                });
+
+                if (totalValue !== categoryValues) {
+                    alert('A soma dos valores das categorias deve ser igual ao valor da transação.');
+                    event.preventDefault();
+                }
+            });
+
+            updateAccountValue();  // Atualiza o valor da conta ao carregar a página
+        });
+    </script>
 }

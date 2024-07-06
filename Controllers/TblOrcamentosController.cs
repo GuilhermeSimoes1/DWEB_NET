@@ -22,7 +22,7 @@ namespace DWEB_NET.Controllers
         // GET: TblOrcamentos
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Orcamentos.Include(t => t.UserID);
+            var applicationDbContext = _context.Orcamentos.Include(t => t.User);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,7 +35,7 @@ namespace DWEB_NET.Controllers
             }
 
             var tblOrcamentos = await _context.Orcamentos
-                .Include(t => t.UserID)
+                .Include(t => t.User)
                 .FirstOrDefaultAsync(m => m.OrcamentoID == id);
             if (tblOrcamentos == null)
             {
@@ -131,7 +131,7 @@ namespace DWEB_NET.Controllers
             }
 
             var tblOrcamentos = await _context.Orcamentos
-                .Include(t => t.UserID)
+                .Include(t => t.User)
                 .FirstOrDefaultAsync(m => m.OrcamentoID == id);
             if (tblOrcamentos == null)
             {

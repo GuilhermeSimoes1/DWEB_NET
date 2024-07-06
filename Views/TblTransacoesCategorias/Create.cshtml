@@ -21,6 +21,11 @@
                 <select asp-for="CategoriaFK" class ="form-control" asp-items="ViewBag.CategoriaFK"></select>
             </div>
             <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

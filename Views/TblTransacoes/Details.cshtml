@@ -17,6 +17,12 @@
             @Html.DisplayFor(model => model.DataTime)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoTransacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoTransacao)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Descricao)
         </dt>
         <dd class = "col-sm-10">
@@ -29,22 +35,22 @@
             @Html.DisplayFor(model => model.ValorTransacao)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ContaID)
+            @Html.DisplayNameFor(model => model.Conta)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ContaID.ContaID)
+            @Html.DisplayFor(model => model.Conta.ContaID)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CategoriaID)
+            @Html.DisplayNameFor(model => model.Categoria)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CategoriaID.CategoriaID)
+            @Html.DisplayFor(model => model.Categoria.CategoriaID)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserID)
+            @Html.DisplayNameFor(model => model.User)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserID.Email)
+            @Html.DisplayFor(model => model.User.Email)
         </dd>
     </dl>
 </div>

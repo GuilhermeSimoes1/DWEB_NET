@@ -22,7 +22,7 @@ namespace DWEB_NET.Controllers
         // GET: TblTransacoesCategorias
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.TransacoesCategorias.Include(t => t.CategoriaID).Include(t => t.TransacaoID);
+            var applicationDbContext = _context.TransacoesCategorias.Include(t => t.Categoria).Include(t => t.Transacao);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,8 +35,8 @@ namespace DWEB_NET.Controllers
             }
 
             var tblTransacoesCategorias = await _context.TransacoesCategorias
-                .Include(t => t.CategoriaID)
-                .Include(t => t.TransacaoID)
+                .Include(t => t.Categoria)
+                .Include(t => t.Transacao)
                 .FirstOrDefaultAsync(m => m.TransacaoFK == id);
             if (tblTransacoesCategorias == null)
             {
@@ -59,7 +59,7 @@ namespace DWEB_NET.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TransacaoFK,CategoriaFK")] TblTransacoesCategorias tblTransacoesCategorias)
+        public async Task<IActionResult> Create([Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace DWEB_NET.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TransacaoFK,CategoriaFK")] TblTransacoesCategorias tblTransacoesCategorias)
+        public async Task<IActionResult> Edit(int id, [Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
         {
             if (id != tblTransacoesCategorias.TransacaoFK)
             {
@@ -136,8 +136,8 @@ namespace DWEB_NET.Controllers
             }
 
             var tblTransacoesCategorias = await _context.TransacoesCategorias
-                .Include(t => t.CategoriaID)
-                .Include(t => t.TransacaoID)
+                .Include(t => t.Categoria)
+                .Include(t => t.Transacao)
                 .FirstOrDefaultAsync(m => m.TransacaoFK == id);
             if (tblTransacoesCategorias == null)
             {

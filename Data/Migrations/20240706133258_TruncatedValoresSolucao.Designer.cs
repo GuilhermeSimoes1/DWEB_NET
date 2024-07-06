@@ -4,6 +4,7 @@ using DWEB_NET.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DWEB_NET.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240706133258_TruncatedValoresSolucao")]
+    partial class TruncatedValoresSolucao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -442,70 +445,70 @@ namespace DWEB_NET.Data.Migrations
 
             modelBuilder.Entity("DWEB_NET.Models.TblContas", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "User")
+                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "UserID")
                         .WithMany("ListaContas")
                         .HasForeignKey("UserFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("UserID");
                 });
 
             modelBuilder.Entity("DWEB_NET.Models.TblOrcamentos", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "User")
+                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "UserID")
                         .WithMany("ListaOrcamentos")
                         .HasForeignKey("UserFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("UserID");
                 });
 
             modelBuilder.Entity("DWEB_NET.Models.TblTransacoes", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblCategorias", "Categoria")
+                    b.HasOne("DWEB_NET.Models.TblCategorias", "CategoriaID")
                         .WithMany()
                         .HasForeignKey("CategoriaFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DWEB_NET.Models.TblContas", "Conta")
+                    b.HasOne("DWEB_NET.Models.TblContas", "ContaID")
                         .WithMany("ListaTransacoes")
                         .HasForeignKey("ContaFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "User")
+                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "UserID")
                         .WithMany("ListaTransacoes")
                         .HasForeignKey("UserFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Categoria");
+                    b.Navigation("CategoriaID");
 
-                    b.Navigation("Conta");
+                    b.Navigation("ContaID");
 
-                    b.Navigation("User");
+                    b.Navigation("UserID");
                 });
 
             modelBuilder.Entity("DWEB_NET.Models.TblTransacoesCategorias", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblCategorias", "Categoria")
+                    b.HasOne("DWEB_NET.Models.TblCategorias", "CategoriaID")
                         .WithMany("ListaTransacoesCategorias")
                         .HasForeignKey("CategoriaFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DWEB_NET.Models.TblTransacoes", "Transacao")
+                    b.HasOne("DWEB_NET.Models.TblTransacoes", "TransacaoID")
                         .WithMany("ListaTransacoesCategorias")
                         .HasForeignKey("TransacaoFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Categoria");
+                    b.Navigation("CategoriaID");
 
-                    b.Navigation("Transacao");
+                    b.Navigation("TransacaoID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

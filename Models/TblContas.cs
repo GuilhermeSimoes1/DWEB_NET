@@ -21,10 +21,10 @@ namespace DWEB_NET.Models
 		public decimal Saldo { get; set; }
         
 
-        [ForeignKey(nameof(UserID))]
+        [ForeignKey(nameof(User))]
 		[Display(Name = "Utilizador associado")]
 		public int UserFK { get; set; }
-		public TblUtilizadores UserID { get; set; }
+		public TblUtilizadores User { get; set; }
 
         public ICollection<TblTransacoes> ListaTransacoes { get; set; }
     }
