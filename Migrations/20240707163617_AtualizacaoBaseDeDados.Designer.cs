@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DWEB_NET.Data.Migrations
+namespace DWEB_NET.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240704163415_RestruturaçãoDaBD")]
-    partial class RestruturaçãoDaBD
+    [Migration("20240707163617_AtualizacaoBaseDeDados")]
+    partial class AtualizacaoBaseDeDados
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,9 +152,6 @@ namespace DWEB_NET.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransacaoID"));
 
-                    b.Property<int>("CategoriaFK")
-                        .HasColumnType("int");
-
                     b.Property<int>("ContaFK")
                         .HasColumnType("int");
 
@@ -165,6 +162,9 @@ namespace DWEB_NET.Data.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<int>("TipoTransacao")
+                        .HasColumnType("int");
+
                     b.Property<int>("UserFK")
                         .HasColumnType("int");
 
@@ -172,8 +172,6 @@ namespace DWEB_NET.Data.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("TransacaoID");
-
-                    b.HasIndex("CategoriaFK");
 
                     b.HasIndex("ContaFK");
 
@@ -189,6 +187,9 @@ namespace DWEB_NET.Data.Migrations
 
                     b.Property<int>("CategoriaFK")
                         .HasColumnType("int");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("TransacaoFK", "CategoriaFK");
 
@@ -439,70 +440,62 @@ namespace DWEB_NET.Data.Migrations
 
             modelBuilder.Entity("DWEB_NET.Models.TblContas", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "UserID")
+                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "User")
                         .WithMany("ListaContas")
                         .HasForeignKey("UserFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("UserID");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("DWEB_NET.Models.TblOrcamentos", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "UserID")
+                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "User")
                         .WithMany("ListaOrcamentos")
                         .HasForeignKey("UserFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("UserID");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("DWEB_NET.Models.TblTransacoes", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblCategorias", "CategoriaID")
-                        .WithMany()
-                        .HasForeignKey("CategoriaFK")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DWEB_NET.Models.TblContas", "ContaID")
+                    b.HasOne("DWEB_NET.Models.TblContas", "Conta")
                         .WithMany("ListaTransacoes")
                         .HasForeignKey("ContaFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "UserID")
+                    b.HasOne("DWEB_NET.Models.TblUtilizadores", "User")
                         .WithMany("ListaTransacoes")
                         .HasForeignKey("UserFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CategoriaID");
+                    b.Navigation("Conta");
 
-                    b.Navigation("ContaID");
-
-                    b.Navigation("UserID");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("DWEB_NET.Models.TblTransacoesCategorias", b =>
                 {
-                    b.HasOne("DWEB_NET.Models.TblCategorias", "CategoriaID")
+                    b.HasOne("DWEB_NET.Models.TblCategorias", "Categoria")
                         .WithMany("ListaTransacoesCategorias")
                         .HasForeignKey("CategoriaFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DWEB_NET.Models.TblTransacoes", "TransacaoID")
+                    b.HasOne("DWEB_NET.Models.TblTransacoes", "Transacao")
                         .WithMany("ListaTransacoesCategorias")
                         .HasForeignKey("TransacaoFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CategoriaID");
+                    b.Navigation("Categoria");
 
-                    b.Navigation("TransacaoID");
+                    b.Navigation("Transacao");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

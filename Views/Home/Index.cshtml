@@ -3,6 +3,21 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <link rel="stylesheet" href="~/css/Hero.css" />
+
+
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title-gragas">Gragas</h1>
+            <h1 class="hero-title">Gerencie as suas finanças com facilidade</h1>
+            <p class="hero-subtitle">Descubra as melhores ferramentas para controle financeiro</p>
+            <div class="hero-buttons">
+                <button class="hero-button" onclick="location.href='@Url.Page("/Account/Login", new { area = "Identity" })'">Login</button>
+                <button class="hero-button" onclick="location.href='@Url.Page("/Account/Register", new { area = "Identity" })'">Sign Up</button>
+                <button class="hero-button" onclick="location.href='@Url.Action("Informacoes", "Home")'">Informações</button>
+
+            </div>
+        </div>
+
 </div>

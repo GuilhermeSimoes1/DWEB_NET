@@ -6,6 +6,7 @@ using DWEB_NET.Data;
 using DWEB_NET.Models;
 using Microsoft.Extensions.Logging;
 using System.Security.Claims;
+using SQLitePCL;
 
 namespace DWEB_NET.Controllers
 {
@@ -20,7 +21,7 @@ namespace DWEB_NET.Controllers
             { TblTransacoes.Tipo.Ganho, new List<int> { 6, 7, 8 } },   // IDs das categorias para transações de Ganho
             { TblTransacoes.Tipo.Gasto, new List<int> { 1, 2, 3, 4, 5, 6 } }  // IDs das categorias para transações de Gasto
         };
-
+        
         public TblTransacoesController(ApplicationDbContext context, ILogger<TblTransacoesController> logger)
         {
             _context = context;
@@ -65,8 +66,8 @@ namespace DWEB_NET.Controllers
         public async Task<IActionResult> Create(TblTransacoes transacao, [FromForm] Dictionary<int, decimal> CategoriaValores)
         {
             _logger.LogInformation("Iniciando o processo de criação de uma nova transação.");
-
-            if (ModelState.IsValid)
+            Console.WriteLine(transacao.User);
+            try
             {
                 _logger.LogInformation("Modelo de transação é válido.");
 
@@ -119,9 +120,23 @@ namespace DWEB_NET.Controllers
                     ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria");
                     return View(transacao);
                 }
+                var TransacaoID = _context.Transacoes.Count();
+                TransacaoID = TransacaoID + 1;
 
-                _logger.LogInformation("Soma dos valores das categorias é igual ao valor da transação.");
+                foreach (KeyValuePair<int, decimal> entry in CategoriaValores)
+                {
+                    decimal value = entry.Value; 
 
+                    if (decimal.Compare(value, 0) != 0) { 
+                    TblTransacoesCategorias data = new TblTransacoesCategorias();
+                    data.TransacaoFK = TransacaoID;
+                    data.CategoriaFK = entry.Key;
+                    data.Valor = entry.Value;
+                    _context.TransacoesCategorias.Add(data);
+                    }
+                }
+            _logger.LogInformation("Soma dos valores das categorias é igual ao valor da transação.");
+                
                 // Atualiza o saldo da conta
                 if (transacao.TipoTransacao == TblTransacoes.Tipo.Ganho)
                 {
@@ -174,7 +189,8 @@ namespace DWEB_NET.Controllers
                     ModelState.AddModelError(string.Empty, "Erro ao salvar a transação.");
                 }
             }
-            else
+            catch (Exception ex)
+         
             {
                 _logger.LogWarning("Modelo de transação inválido.");
                 foreach (var state in ModelState)
@@ -192,7 +208,7 @@ namespace DWEB_NET.Controllers
             ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria");
             return View(transacao);
         }
-
+    
 
 
         // GET: TblTransacoes/Index

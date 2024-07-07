@@ -35,10 +35,7 @@ namespace DWEB_NET.Models
         public int ContaFK { get; set; }
         public TblContas Conta { get; set; }
 
-        [ForeignKey(nameof(Categoria))]
-        [Display(Name = "Categoria associada")]
-        public int CategoriaFK { get; set; }
-        public TblCategorias Categoria{ get; set; }
+
 
         [ForeignKey(nameof(User))]
         [Display(Name = "Utilizador associado")]

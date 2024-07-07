@@ -1,0 +1,14 @@
+﻿.custom-dropdown {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.custom-dropdown-toggle {
+    width: 100%;
+    text-align: left;
+}
+
+.btn {
+    width: 100px;
+    margin: 10px;
+}

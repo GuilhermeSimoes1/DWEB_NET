@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\Informacoes.css"
     },
     {
+      "Id": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\css\\Moedas.css",
+      "PackagePath": "staticwebassets\\css\\Moedas.css"
+    },
+    {
       "Id": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

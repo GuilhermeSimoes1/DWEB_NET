@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gUNPmlbdyGUdKoNM+gJYWbZHJFdSaMzekMm9MFbXjQg=",
+  "Hash": "666ju7GsZSJt1SmpM1+FQd5VlJjpMzSzrQ50VdcMF8k=",
   "Source": "DWEB_NET",
   "BasePath": "_content/DWEB_NET",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Informacoes.css"
+    },
+    {
+      "Identity": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\css\\Moedas.css",
+      "SourceId": "DWEB_NET",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\",
+      "BasePath": "_content/DWEB_NET",
+      "RelativePath": "css/Moedas.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Moedas.css"
     },
     {
       "Identity": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\wwwroot\\css\\site.css",

@@ -14,7 +14,7 @@
                         
                         <input type="hidden" asp-for="UserFK" value="@ViewBag.UserFK" />
                        
-                        <input type="hidden" asp-for="CategoriaFK" value="@ViewBag.CategoriaFK" />
+
 
                         <div class="form-group">
                             <label asp-for="ValorTransacao" class="control-label">Valor</label>
@@ -38,7 +38,7 @@
                                 <option value="Ganho">Ganho</option>
                             </select>
                             <span asp-validation-for="TipoTransacao" class="text-danger"></span>
-                        </div>
+                        </div> @*fazer com if*@
                         <div class="form-group" id="categorias-container" style="display:none;">
                             <label>Categorias Selecionadas</label>
                             <div id="categoria-valores" class="mt-2">

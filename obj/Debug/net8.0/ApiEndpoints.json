@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "DWEB_NET.Controllers.API.V1",
+    "Method": "GetUsers",
+    "RelativePath": "api/V1/GetUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

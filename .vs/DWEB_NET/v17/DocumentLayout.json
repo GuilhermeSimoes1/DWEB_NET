@@ -3,56 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\views\\tbltransacoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tbltransacoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\controllers\\tbltransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\tbltransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\views\\home\\hero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\home\\hero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tbltransacoescategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tbltransacoescategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Contas.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tbltransacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tbltransacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\views\\tblorcamentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblcontas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblcontas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\views\\home\\hero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\home\\hero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\models\\tblcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\views\\tbltransacoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tbltransacoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.TransacoesCategorias.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Transacoes.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Utilizadores.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\migrations\\20240707163617_atualizacaobasededados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:migrations\\20240707163617_atualizacaobasededados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\controllers\\tbltransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\tbltransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\gui\\onedrive - instituto polit\u00E9cnico de tomar\\ambiente de trabalho\\dweb_net\\dweb_net\\views\\tbltransacoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tbltransacoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,171 +66,159 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblTransacoes\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\TblTransacoes\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblTransacoes\\Create.cshtml",
-              "RelativeToolTip": "Views\\TblTransacoes\\Create.cshtml",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-06T21:58:04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Hero.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\Home\\Hero.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Hero.cshtml",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\Home\\Hero.cshtml",
-              "RelativeToolTip": "Views\\Home\\Hero.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-06T21:57:59.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TblUtilizadores.cs",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblUtilizadores.cs",
-              "RelativeDocumentMoniker": "Models\\TblUtilizadores.cs",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblUtilizadores.cs",
-              "RelativeToolTip": "Models\\TblUtilizadores.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:57:52.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TblTransacoesCategorias.cs",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoesCategorias.cs",
-              "RelativeDocumentMoniker": "Models\\TblTransacoesCategorias.cs",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoesCategorias.cs",
-              "RelativeToolTip": "Models\\TblTransacoesCategorias.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:57:49.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "TblTransacoes.cs",
               "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoes.cs",
               "RelativeDocumentMoniker": "Models\\TblTransacoes.cs",
               "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblTransacoes.cs",
               "RelativeToolTip": "Models\\TblTransacoes.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:57:44.581Z",
+              "WhenOpened": "2024-07-07T21:26:12.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblOrcamentos\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblOrcamentos\\Create.cshtml",
+              "RelativeToolTip": "Views\\TblOrcamentos\\Create.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T21:23:00.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hero.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\Home\\Hero.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Hero.cshtml",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\Home\\Hero.cshtml",
+              "RelativeToolTip": "Views\\Home\\Hero.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T21:21:50.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TblOrcamentos.cs",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblOrcamentos.cs",
-              "RelativeDocumentMoniker": "Models\\TblOrcamentos.cs",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblOrcamentos.cs",
-              "RelativeToolTip": "Models\\TblOrcamentos.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:57:41.406Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T21:21:31.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TblContas.cs",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblContas.cs",
-              "RelativeDocumentMoniker": "Models\\TblContas.cs",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblContas.cs",
-              "RelativeToolTip": "Models\\TblContas.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:57:38.049Z",
+              "DocumentIndex": 1,
+              "Title": "dbo.Contas [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Contas.sql",
+              "ToolTip": "dbo.Contas [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-07-07T17:03:30.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TblCategorias.cs",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblCategorias.cs",
-              "RelativeDocumentMoniker": "Models\\TblCategorias.cs",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Models\\TblCategorias.cs",
-              "RelativeToolTip": "Models\\TblCategorias.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:57:34.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:57:29.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "TblTransacoesController.cs",
               "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Controllers\\TblTransacoesController.cs",
               "RelativeDocumentMoniker": "Controllers\\TblTransacoesController.cs",
               "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Controllers\\TblTransacoesController.cs",
               "RelativeToolTip": "Controllers\\TblTransacoesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAdAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAqwHoAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:55:10.583Z",
+              "WhenOpened": "2024-07-07T16:41:30.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T21:55:06.856Z",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblTransacoes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblTransacoes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblTransacoes\\Index.cshtml",
+              "RelativeToolTip": "Views\\TblTransacoes\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T17:13:30.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.TransacoesCategorias [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.TransacoesCategorias.sql",
+              "ToolTip": "dbo.TransacoesCategorias [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-07-07T16:40:52.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.Utilizadores [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Utilizadores.sql",
+              "ToolTip": "dbo.Utilizadores [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-07-07T16:39:30.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "dbo.Transacoes [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Transacoes.sql",
+              "ToolTip": "dbo.Transacoes [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-07-07T16:40:20.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-06T21:54:59.464Z",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T16:36:55.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20240707163617_AtualizacaoBaseDeDados.cs",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Migrations\\20240707163617_AtualizacaoBaseDeDados.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240707163617_AtualizacaoBaseDeDados.cs",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Migrations\\20240707163617_AtualizacaoBaseDeDados.cs",
+              "RelativeToolTip": "Migrations\\20240707163617_AtualizacaoBaseDeDados.cs",
+              "ViewState": "AQIAAPYAAAAAAAAAAAASwAgBAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T16:36:17.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblTransacoes\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblTransacoes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Gui\\OneDrive - Instituto Polit\u00E9cnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\Views\\TblTransacoes\\Create.cshtml",
+              "RelativeToolTip": "Views\\TblTransacoes\\Create.cshtml",
+              "ViewState": "AQIAAAUAAAAAAAAAAAArwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-06T21:54:52.976Z",
+              "WhenOpened": "2024-07-07T16:35:48.075Z",
               "EditorCaption": ""
             }
           ]
