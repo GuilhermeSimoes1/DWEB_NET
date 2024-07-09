@@ -38,7 +38,7 @@ namespace DWEB_NET.Controllers
                 // Utilizador normal só pode ver o seu próprio utilizador
                 utilizadoresQuery = _context.Utilizadores.Where(u => u.UserAutent == userId);
             }
-
+            ViewBag.IsAdmin = userAutent?.IsAdmin ?? false;
             var utilizadores = await utilizadoresQuery.ToListAsync();
             return View(utilizadores);
         }

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf3a9b48c763e2433c1127e96c4b95f1b5be9b42")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ce89b2e751694fc97f223098589fbd7f417f62d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

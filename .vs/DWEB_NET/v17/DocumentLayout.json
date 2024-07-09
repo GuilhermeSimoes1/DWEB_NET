@@ -3,24 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblutilizadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblutilizadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblorcamentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Migrations\\20240709164718_Regular_Expressions2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240709164718_Regular_Expressions2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblutilizadores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblutilizadores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\controllers\\tblutilizadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\tblutilizadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\controllers\\tblorcamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\tblorcamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblorcamentos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tbltransacoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tbltransacoes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tbltransacoes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tbltransacoes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblorcamentos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblorcamentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblorcamentos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblutilizadores\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblutilizadores\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:models\\tblorcamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\controllers\\tbltransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\tbltransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblutilizadores\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -29,18 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblutilizadores\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblutilizadores\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblutilizadores\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblutilizadores\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblutilizadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblutilizadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblcontas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -52,18 +84,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\controllers\\tblcontascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\tblcontascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblorcamentos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\views\\tblorcamentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:views\\tblorcamentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -96,7 +116,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -104,7 +124,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblUtilizadores\\Create.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Create.cshtml",
+              "RelativeToolTip": "Views\\TblUtilizadores\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T18:51:01.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Create.cshtml",
+              "RelativeToolTip": "Views\\TblOrcamentos\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T14:19:30.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "TblOrcamentos.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\TblOrcamentos.cs",
               "RelativeDocumentMoniker": "Models\\TblOrcamentos.cs",
@@ -117,43 +163,176 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\TblUtilizadores\\Details.cshtml",
               "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Details.cshtml",
               "RelativeToolTip": "Views\\TblUtilizadores\\Details.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACoAAAAHAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T14:35:38.247Z"
+              "WhenOpened": "2024-07-09T14:35:38.247Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\TblUtilizadores\\Index.cshtml",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Index.cshtml",
-              "RelativeToolTip": "Views\\TblUtilizadores\\Index.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAADAAAAARAAAA",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Index.cshtml*",
+              "RelativeToolTip": "Views\\TblUtilizadores\\Index.cshtml*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T14:34:57.872Z"
+              "WhenOpened": "2024-07-09T14:34:57.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Details.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Details.cshtml",
+              "RelativeToolTip": "Views\\TblOrcamentos\\Details.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T14:19:30.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TblOrcamentosController.cs",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblOrcamentosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TblOrcamentosController.cs",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblOrcamentosController.cs",
+              "RelativeToolTip": "Controllers\\TblOrcamentosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T14:19:30.239Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\TblUtilizadores\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Edit.cshtml",
-              "RelativeToolTip": "Views\\TblUtilizadores\\Edit.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACgAAAAMAAAA",
+              "Title": "TblUtilizadores.cs",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\TblUtilizadores.cs",
+              "RelativeDocumentMoniker": "Models\\TblUtilizadores.cs",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\TblUtilizadores.cs",
+              "RelativeToolTip": "Models\\TblUtilizadores.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwAsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T14:19:30.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TblUtilizadoresController.cs",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblUtilizadoresController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TblUtilizadoresController.cs",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblUtilizadoresController.cs",
+              "RelativeToolTip": "Controllers\\TblUtilizadoresController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T14:19:30.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T14:34:25.682Z"
+              "WhenOpened": "2024-07-09T14:19:30.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TblTransacoesController.cs",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblTransacoesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TblTransacoesController.cs",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblTransacoesController.cs",
+              "RelativeToolTip": "Controllers\\TblTransacoesController.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAjwDUAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T18:42:20.299Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Edit.cshtml",
+              "RelativeToolTip": "Views\\TblOrcamentos\\Edit.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T18:48:33.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Index.cshtml",
+              "RelativeToolTip": "Views\\TblOrcamentos\\Index.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T18:48:35.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Delete.cshtml",
+              "RelativeToolTip": "Views\\TblOrcamentos\\Delete.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T18:48:39.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblTransacoes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblTransacoes\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblTransacoes\\Delete.cshtml",
+              "RelativeToolTip": "Views\\TblTransacoes\\Delete.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T18:48:56.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblTransacoes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblTransacoes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblTransacoes\\Edit.cshtml",
+              "RelativeToolTip": "Views\\TblTransacoes\\Edit.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T18:49:00.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "TblContasController.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblContasController.cs",
               "RelativeDocumentMoniker": "Controllers\\TblContasController.cs",
@@ -165,83 +344,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Details.cshtml",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Details.cshtml",
-              "RelativeToolTip": "Views\\TblOrcamentos\\Details.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "DocumentIndex": 16,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\TblUtilizadores\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Edit.cshtml",
+              "RelativeToolTip": "Views\\TblUtilizadores\\Edit.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T14:19:30.231Z"
+              "WhenOpened": "2024-07-09T14:34:25.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TblUtilizadores.cs",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\TblUtilizadores.cs",
-              "RelativeDocumentMoniker": "Models\\TblUtilizadores.cs",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\TblUtilizadores.cs",
-              "RelativeToolTip": "Models\\TblUtilizadores.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T14:19:30.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20240709164718_Regular_Expressions2.cs",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Migrations\\20240709164718_Regular_Expressions2.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240709164718_Regular_Expressions2.cs",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Migrations\\20240709164718_Regular_Expressions2.cs",
-              "RelativeToolTip": "Migrations\\20240709164718_Regular_Expressions2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T16:47:18.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TblOrcamentosController.cs",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblOrcamentosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TblOrcamentosController.cs",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblOrcamentosController.cs",
-              "RelativeToolTip": "Controllers\\TblOrcamentosController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAA5wDIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T14:19:30.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAQwEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T14:19:30.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TblUtilizadoresController.cs",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblUtilizadoresController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TblUtilizadoresController.cs",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblUtilizadoresController.cs",
-              "RelativeToolTip": "Controllers\\TblUtilizadoresController.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAcwGQAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T14:19:30.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblUtilizadores\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\TblUtilizadores\\Delete.cshtml",
@@ -253,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\afons\\AppData\\Local\\SourceServer\\9aa189669ae5b84af6c7c7fcae842aaa07cf4d5bb3faf1bf3defa21c8fd22f19\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\9aa189669ae5b84af6c7c7fcae842aaa07cf4d5bb3faf1bf3defa21c8fd22f19\\Program.cs",
@@ -265,19 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\TblOrcamentos\\Create.cshtml",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblOrcamentos\\Create.cshtml",
-              "RelativeToolTip": "Views\\TblOrcamentos\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T14:19:30.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -289,19 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-09T14:19:30.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\TblContas\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\TblContas\\Index.cshtml",
@@ -313,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "Informacoes.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\Home\\Informacoes.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Informacoes.cshtml",
@@ -325,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
@@ -337,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
@@ -349,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "dbo.AspNetUserClaims [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.AspNetUserClaims.sql",
               "ToolTip": "dbo.AspNetUserClaims [Data]",
@@ -358,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "TblCategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblCategoriasController.cs",
               "RelativeDocumentMoniker": "Controllers\\TblCategoriasController.cs",
