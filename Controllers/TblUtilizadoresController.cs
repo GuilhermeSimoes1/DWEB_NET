@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DWEB_NET.Data;
 using DWEB_NET.Models;
+using System.Security.Claims;
 
 namespace DWEB_NET.Controllers
 {
@@ -22,8 +23,26 @@ namespace DWEB_NET.Controllers
         // GET: TblUtilizadores
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Utilizadores.ToListAsync());
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
+
+            IQueryable<TblUtilizadores> utilizadoresQuery;
+
+            if (userAutent != null && userAutent.IsAdmin)
+            {
+                // Admin pode ver todos os utilizadores
+                utilizadoresQuery = _context.Utilizadores;
+            }
+            else
+            {
+                // Utilizador normal só pode ver o seu próprio utilizador
+                utilizadoresQuery = _context.Utilizadores.Where(u => u.UserAutent == userId);
+            }
+
+            var utilizadores = await utilizadoresQuery.ToListAsync();
+            return View(utilizadores);
         }
+
 
         // GET: TblUtilizadores/Details/5
         public async Task<IActionResult> Details(int? id)

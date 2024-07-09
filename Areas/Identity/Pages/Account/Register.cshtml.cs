@@ -60,6 +60,14 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+            [Display(Name = "Nome")]
+            [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
+            public string FirstName { get; set; }
+
+            [Display(Name = "Apelido")]
+            [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
+            public string LastName { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -75,6 +83,10 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Required]
+            [Display(Name = "Username")]
+            public string UserName { get; set; } 
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -105,7 +117,7 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
                     var utilizador = new TblUtilizadores
                     {
                         UserAutent = userId,
-                        UserName = Input.Email,
+                        UserName = Input.UserName,
                         Email = Input.Email,
                     };
 

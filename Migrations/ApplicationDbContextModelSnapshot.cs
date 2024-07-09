@@ -213,12 +213,15 @@ namespace DWEB_NET.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 

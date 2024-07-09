@@ -27,12 +27,15 @@ namespace DWEB_NET.Models
         [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
         public string Email { get; set; }
 
-        //[RegularExpression("[0-9]{1,6}([,.][0-9]{1,2})?", ErrorMessage = "Escreva um número com, no máximo 2 casas decimais, separadas por . ou ,")]
-        [RegularExpression("[]")]
-        public string? FirstName { get; set; }
+        [StringLength(30)]
+        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
+        [RegularExpression("[A-Z-Í][a-zãóíç]{1,14}", ErrorMessage = "Nome inválido")]
+        public string FirstName { get; set; }
 
         [StringLength(30)]
-        public string? LastName { get; set; }
+        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
+        [RegularExpression("[A-Z-Í][a-zãóíç]{1,14}", ErrorMessage = "Nome inválido")]
+        public string LastName { get; set; }
 
         [StringLength(255)]
         public string? Descricao { get; set; }
