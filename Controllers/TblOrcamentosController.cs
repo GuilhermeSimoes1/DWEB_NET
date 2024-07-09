@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DWEB_NET.Data;
 using DWEB_NET.Models;
+using System.Security.Claims;
 
 namespace DWEB_NET.Controllers
 {
@@ -22,27 +23,32 @@ namespace DWEB_NET.Controllers
         // GET: TblOrcamentos
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Orcamentos.Include(t => t.User);
-            return View(await applicationDbContext.ToListAsync());
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
+
+            if (userAutent.IsAdmin)
+            {
+                var applicationDbContextAdmin = _context.Contas.Include(t => t.User);
+                return View(await applicationDbContextAdmin.ToListAsync());
+            }
+            else
+            {
+                var applicationDbContextUser = _context.Contas
+                    .Where(t => t.UserFK == userAutent.UserID)
+                    .Include(t => t.User);
+                return View(await applicationDbContextUser.ToListAsync());
+            }
         }
 
         // GET: TblOrcamentos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var orcamento = await _context.Orcamentos
+              .FirstOrDefaultAsync(m => m.OrcamentoID == id);
+            ViewBag.NomeOrcamento = await _context.Orcamentos.ToListAsync();
 
-            var tblOrcamentos = await _context.Orcamentos
-                .Include(t => t.User)
-                .FirstOrDefaultAsync(m => m.OrcamentoID == id);
-            if (tblOrcamentos == null)
-            {
-                return NotFound();
-            }
+            return View(orcamento);
 
-            return View(tblOrcamentos);
         }
 
         // GET: TblOrcamentos/Create
@@ -57,20 +63,19 @@ namespace DWEB_NET.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("OrcamentoID,NomeOrcamento,ValorNecessario,DataInicial,DataFinal,ValorAtual,UserFK")] TblOrcamentos tblOrcamentos)
+        public async Task<IActionResult> Create([Bind("NomeOrcamento,ValorNecessario,DataInicial,DataFinal,ValorAtual,UserFK")] TblOrcamentos tblOrcamentos)
         {
-            if (ModelState.IsValid)
-            {
+            
                 _context.Add(tblOrcamentos);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["UserFK"] = new SelectList(_context.Utilizadores, "UserID", "Email", tblOrcamentos.UserFK);
-            return View(tblOrcamentos);
-        }
+                return RedirectToAction(nameof(Details));
+                ViewBag.UserFK = new SelectList(_context.Users, "UserId", "UserName", tblOrcamentos.UserFK);
 
-        // GET: TblOrcamentos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+                return View(tblOrcamentos);
+        }
+    
+    // GET: TblOrcamentos/Edit/5
+    public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -98,8 +103,7 @@ namespace DWEB_NET.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            
                 try
                 {
                     _context.Update(tblOrcamentos);
@@ -116,8 +120,8 @@ namespace DWEB_NET.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
+                return RedirectToAction(nameof(Details));
+            
             ViewData["UserFK"] = new SelectList(_context.Utilizadores, "UserID", "Email", tblOrcamentos.UserFK);
             return View(tblOrcamentos);
         }
@@ -153,7 +157,7 @@ namespace DWEB_NET.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details));
         }
 
         private bool TblOrcamentosExists(int id)

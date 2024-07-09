@@ -17,211 +17,211 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DWEB_NET
 build_property.RootNamespace = DWEB_NET
-build_property.ProjectDir = C:\Users\Gui\OneDrive - Instituto Politécnico de Tomar\Ambiente de Trabalho\DWEB_NET\DWEB_NET\
+build_property.ProjectDir = C:\Users\afons\OneDrive\Ambiente de Trabalho\DWEB\DWEB_NET\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Gui\OneDrive - Instituto Politécnico de Tomar\Ambiente de Trabalho\DWEB_NET\DWEB_NET
+build_property.MSBuildProjectDirectory = C:\Users\afons\OneDrive\Ambiente de Trabalho\DWEB\DWEB_NET
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Hero.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Home/Hero.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIZXJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Index.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Informacoes.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Home/Informacoes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmZvcm1hY29lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Moedas.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Home/Moedas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb2VkYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Home/Privacy.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Shared/Error.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblCategorias/Create.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblCategorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblCategorias/Delete.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblCategorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblCategorias/Details.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblCategorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblCategorias/Edit.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblCategorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblCategorias/Index.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblCategorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblContas/Create.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblContas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ29udGFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblContas/Delete.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblContas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ29udGFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblContas/Details.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblContas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ29udGFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblContas/Edit.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblContas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ29udGFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblContas/Index.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblContas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsQ29udGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblOrcamentos/Create.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblOrcamentos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JjYW1lbnRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblOrcamentos/Delete.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblOrcamentos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JjYW1lbnRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblOrcamentos/Details.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblOrcamentos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JjYW1lbnRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblOrcamentos/Edit.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblOrcamentos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JjYW1lbnRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblOrcamentos/Index.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblOrcamentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsT3JjYW1lbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoesCategorias/Create.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoesCategorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc0NhdGVnb3JpYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoesCategorias/Delete.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoesCategorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc0NhdGVnb3JpYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoesCategorias/Details.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoesCategorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc0NhdGVnb3JpYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoesCategorias/Edit.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoesCategorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc0NhdGVnb3JpYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoesCategorias/Index.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoesCategorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc0NhdGVnb3JpYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoes/Create.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoes/Delete.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoes/Details.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoes/Edit.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblTransacoes/Index.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblTransacoes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVHJhbnNhY29lc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblUtilizadores/Create.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblUtilizadores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVXRpbGl6YWRvcmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblUtilizadores/Delete.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblUtilizadores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVXRpbGl6YWRvcmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblUtilizadores/Details.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblUtilizadores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVXRpbGl6YWRvcmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblUtilizadores/Edit.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblUtilizadores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVXRpbGl6YWRvcmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/TblUtilizadores/Index.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/TblUtilizadores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsVXRpbGl6YWRvcmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/_ViewImports.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/_ViewStart.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gui/OneDrive - Instituto Politécnico de Tomar/Ambiente de Trabalho/DWEB_NET/DWEB_NET/Views/Shared/_Layout.cshtml]
+[C:/Users/afons/OneDrive/Ambiente de Trabalho/DWEB/DWEB_NET/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ecmxfpoq70

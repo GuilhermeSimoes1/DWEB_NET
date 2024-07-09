@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DWEB_NET.Migrations
 {
     /// <inheritdoc />
-    public partial class AtualizacaoBaseDeDados : Migration
+    public partial class oi : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -255,7 +255,7 @@ namespace DWEB_NET.Migrations
                         column: x => x.ContaFK,
                         principalTable: "Contas",
                         principalColumn: "ContaID",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Transacoes_Utilizadores_UserFK",
                         column: x => x.UserFK,

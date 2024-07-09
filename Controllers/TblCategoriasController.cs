@@ -39,7 +39,6 @@ namespace DWEB_NET.Controllers
             {
                 return NotFound();
             }
-
             return View(tblCategorias);
         }
 
@@ -56,11 +55,14 @@ namespace DWEB_NET.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CategoriaID,NomeCategoria")] TblCategorias tblCategorias)
         {
-            if (ModelState.IsValid)
-            {
+            try { 
                 _context.Add(tblCategorias);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+            }
+            catch (Exception e)
+            {
+                return View(tblCategorias);
             }
             return View(tblCategorias);
         }

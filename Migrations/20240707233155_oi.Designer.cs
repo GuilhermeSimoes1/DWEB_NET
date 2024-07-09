@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DWEB_NET.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240707163617_AtualizacaoBaseDeDados")]
-    partial class AtualizacaoBaseDeDados
+    [Migration("20240707233155_oi")]
+    partial class oi
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

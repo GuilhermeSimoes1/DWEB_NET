@@ -35,6 +35,8 @@ namespace DWEB_NET.Models
         [StringLength(255)]
         public string? Descricao { get; set; }
 
+        public bool IsAdmin { get; set; }
+
 
         /// <summary>
         /// atributo para funcionar como FK entre a tabela dos Utilizadores
