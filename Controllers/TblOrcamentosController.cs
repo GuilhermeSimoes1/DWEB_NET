@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using DWEB_NET.Data;
 using DWEB_NET.Models;
 using System.Security.Claims;
+using NuGet.Protocol.Core.Types;
 
 namespace DWEB_NET.Controllers
 {
@@ -26,25 +27,40 @@ namespace DWEB_NET.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
 
-            if (userAutent.IsAdmin == true)
+            IQueryable<TblOrcamentos> orcamentosQuery;
+
+            if (userAutent != null && userAutent.IsAdmin)
             {
-                var applicationDbContextAdmin = _context.Contas.Include(t => t.User);
-                return View(await applicationDbContextAdmin.ToListAsync());
+                orcamentosQuery = _context.Orcamentos.Include(o => o.User);
             }
             else
             {
-                var applicationDbContextUser = _context.Contas
-                    .Where(t => t.UserFK == userAutent.UserID)
-                    .Include(t => t.User);
-                return View(await applicationDbContextUser.ToListAsync());
+                orcamentosQuery = _context.Orcamentos.Where(o => o.UserFK == userAutent.UserID).Include(o => o.User);
             }
+
+            var orcamentos = await orcamentosQuery.ToListAsync();
+            return View(orcamentos);
         }
         // GET: TblOrcamentos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            var orcamento = await _context.Orcamentos
-              .FirstOrDefaultAsync(m => m.OrcamentoID == id);
-            ViewBag.NomeOrcamento = await _context.Orcamentos.ToListAsync();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
+
+            TblOrcamentos orcamento;
+
+            if (userAutent != null && userAutent.IsAdmin)
+            {
+                orcamento = await _context.Orcamentos
+                  .FirstOrDefaultAsync(m => m.OrcamentoID == id);
+                ViewBag.NomeOrcamento = await _context.Orcamentos.ToListAsync();
+            }
+            else
+            {
+                orcamento = await _context.Orcamentos
+                  .FirstOrDefaultAsync(m => m.OrcamentoID == id && m.UserFK == userAutent.UserID);
+                ViewBag.NomeOrcamento = await _context.Orcamentos.Where(o => o.UserFK == userAutent.UserID).ToListAsync();
+            }
             return View(orcamento);
         }
 
@@ -62,13 +78,18 @@ namespace DWEB_NET.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("NomeOrcamento,ValorNecessario,DataInicial,DataFinal,ValorAtual,UserFK")] TblOrcamentos tblOrcamentos)
         {
-            
+            try
+            {
                 _context.Add(tblOrcamentos);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Details));
+            }catch (Exception e)
+            {
                 ViewBag.UserFK = new SelectList(_context.Users, "UserId", "UserName", tblOrcamentos.UserFK);
-
                 return View(tblOrcamentos);
+            }
+                
+                
         }
     
     // GET: TblOrcamentos/Edit/5

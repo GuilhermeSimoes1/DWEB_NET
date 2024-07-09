@@ -93,8 +93,6 @@ namespace DWEB_NET.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
                 try
                 {
                     _context.Update(tblUtilizadores);
@@ -108,12 +106,10 @@ namespace DWEB_NET.Controllers
                     }
                     else
                     {
-                        throw;
+                        return RedirectToAction(nameof(Index));
                     }
-                }
-                return RedirectToAction(nameof(Index));
             }
-            return View(tblUtilizadores);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: TblUtilizadores/Delete/5

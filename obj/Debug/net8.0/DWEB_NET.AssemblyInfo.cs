@@ -16,11 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8582157a04314ba1f01850f5548bb8a3f92225a")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71a9d5e88c73a3d0ef1a009d0ae8ac8d00588c76")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da9c39499d9538a71276f9f1a94b9bd4537d20b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
