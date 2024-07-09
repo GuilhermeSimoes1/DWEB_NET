@@ -26,7 +26,7 @@ namespace DWEB_NET.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
 
-            if (userAutent.IsAdmin)
+            if (userAutent.IsAdmin == true)
             {
                 var applicationDbContextAdmin = _context.Contas.Include(t => t.User);
                 return View(await applicationDbContextAdmin.ToListAsync());
@@ -39,16 +39,13 @@ namespace DWEB_NET.Controllers
                 return View(await applicationDbContextUser.ToListAsync());
             }
         }
-
         // GET: TblOrcamentos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             var orcamento = await _context.Orcamentos
               .FirstOrDefaultAsync(m => m.OrcamentoID == id);
             ViewBag.NomeOrcamento = await _context.Orcamentos.ToListAsync();
-
             return View(orcamento);
-
         }
 
         // GET: TblOrcamentos/Create
