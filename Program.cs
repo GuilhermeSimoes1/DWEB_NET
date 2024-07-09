@@ -39,6 +39,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Middleware de autenticação
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -12,6 +12,7 @@ namespace DWEB_NET.Models
             ListaContas = new HashSet<TblContas>();
             ListaTransacoes = new HashSet<TblTransacoes>();
             ListaOrcamentos = new HashSet<TblOrcamentos>();
+            IsAdmin = false;
         }
 
 
@@ -35,7 +36,11 @@ namespace DWEB_NET.Models
         [StringLength(255)]
         public string? Descricao { get; set; }
 
+<<<<<<< Updated upstream
         public bool IsAdmin { get; set; }
+=======
+        public Boolean IsAdmin { get; set; } 
+>>>>>>> Stashed changes
 
 
         /// <summary>

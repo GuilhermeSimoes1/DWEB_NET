@@ -24,10 +24,18 @@ namespace DWEB_NET.Controllers.API
         public ActionResult GetUsers()
         {
             var x = _Context.Utilizadores.ToList();
+            
             return Ok(x);
         }
 
+        [HttpGet]
+        [Route("GetAccount")]
 
+        public ActionResult GetAccount()
+        {
+            var x = _Context.Contas.ToList();
+            return Ok(x);
+        }
 
 
 

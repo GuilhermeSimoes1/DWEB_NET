@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "DWEB_NET.Controllers.API.V1",
+    "Method": "GetAccount",
+    "RelativePath": "api/V1/GetAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.API.V1",
     "Method": "GetUsers",
     "RelativePath": "api/V1/GetUsers",
     "HttpMethod": "GET",

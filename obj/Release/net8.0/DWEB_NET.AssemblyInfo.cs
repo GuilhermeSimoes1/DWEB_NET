@@ -14,13 +14,9 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-DWEB_NET-c6819a10-4753-48e1-948e-97a400b23043")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("DWEB_NET")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71a9d5e88c73a3d0ef1a009d0ae8ac8d00588c76")]
-=======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2d69e0ec25d208f45b001252607d992992750f8")]
->>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DWEB_NET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

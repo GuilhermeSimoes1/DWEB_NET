@@ -1,12 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using DWEB_NET.Data;
 using DWEB_NET.Models;
-using Microsoft.Extensions.Logging;
+using Microsoft.CodeAnalysis.Elfie.Diagnostics;
 using System.Security.Claims;
-using SQLitePCL;
 
 namespace DWEB_NET.Controllers
 {
@@ -14,6 +17,7 @@ namespace DWEB_NET.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<TblTransacoesController> _logger;
+        private readonly List<int> adminUserIds = new List<int> { 1,2,3,4,5 };
 
         // Dictionary para mapear tipos de transação aos IDs das categorias correspondentes
         private readonly Dictionary<TblTransacoes.Tipo, List<int>> categoriasPorTipo = new Dictionary<TblTransacoes.Tipo, List<int>>
@@ -21,8 +25,11 @@ namespace DWEB_NET.Controllers
             { TblTransacoes.Tipo.Ganho, new List<int> { 6, 7, 8 } },   // IDs das categorias para transações de Ganho
             { TblTransacoes.Tipo.Gasto, new List<int> { 1, 2, 3, 4, 5, 6 } }  // IDs das categorias para transações de Gasto
         };
-        
+
+
+
         public TblTransacoesController(ApplicationDbContext context, ILogger<TblTransacoesController> logger)
+
         {
             _context = context;
             _logger = logger;
@@ -31,6 +38,7 @@ namespace DWEB_NET.Controllers
         // Método para obter o valor da conta selecionada
         public JsonResult GetAccountValue(int accountId)
         {
+
             var account = _context.Contas.FirstOrDefault(a => a.ContaID == accountId);
             if (account == null)
             {
@@ -40,6 +48,7 @@ namespace DWEB_NET.Controllers
             _logger.LogInformation($"Valor da conta {account.NomeConta} encontrada: {account.Saldo}");
             return Json(new { success = true, valorConta = account.Saldo });
         }
+
 
         // Método para obter as categorias por tipo de transação
         public JsonResult GetCategoriasPorTipo(string tipoTransacao)
@@ -60,7 +69,185 @@ namespace DWEB_NET.Controllers
             return Json(new List<object>());  // Retorna uma lista vazia se não encontrar categorias correspondentes
         }
 
-        // Método para criar uma nova transação
+
+
+
+        // GET: TblTransacoes
+        public async Task<IActionResult> Index()
+        {
+            // Obter o Id do utilizador logado
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            // Encontrar o utilizador associado ao email
+            var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
+            if(userAutent.IsAdmin == true)
+
+            {
+
+                var applicationDbContextAdmin = _context.Transacoes.Include(t => t.Conta).Include(t => t.User);
+                return View(await applicationDbContextAdmin.ToListAsync());
+            }
+
+                var applicationDbContextUser = _context.Transacoes.Where(t => t.UserFK == userAutent.UserID ).Include(t => t.Conta).Include(t => t.User);
+                return View(await applicationDbContextUser.ToListAsync());
+
+        }
+
+
+        
+
+        // GET: TblTransacoes/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var tblTransacoes = await _context.Transacoes
+                .Include(t => t.Conta)
+                .Include(t => t.User)
+                .FirstOrDefaultAsync(m => m.TransacaoID == id);
+            if (tblTransacoes == null)
+            {
+                return NotFound();
+            }
+
+            return View(tblTransacoes);
+        }
+        // GET: TblTransacoes/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var tblTransacoes = await _context.Transacoes.FindAsync(id);
+            if (tblTransacoes == null)
+            {
+                return NotFound();
+            }
+            ViewData["ContaFK"] = new SelectList(_context.Contas, "ContaID", "ContaID", tblTransacoes.ContaFK);
+            ViewData["UserFK"] = new SelectList(_context.Utilizadores, "UserID", "Email", tblTransacoes.UserFK);
+            return View(tblTransacoes);
+        }
+
+        // POST: TblTransacoes/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("TransacaoID,DataTime,TipoTransacao,Descricao,ValorTransacao,ContaFK,UserFK")] TblTransacoes tblTransacoes)
+        {
+            if (id != tblTransacoes.TransacaoID)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(tblTransacoes);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!TblTransacoesExists(tblTransacoes.TransacaoID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["ContaFK"] = new SelectList(_context.Contas, "ContaID", "ContaID", tblTransacoes.ContaFK);
+            ViewData["UserFK"] = new SelectList(_context.Utilizadores, "UserID", "Email", tblTransacoes.UserFK);
+            return View(tblTransacoes);
+        }
+
+        // GET: TblTransacoes/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var tblTransacoes = await _context.Transacoes
+                .Include(t => t.Conta)
+                .Include(t => t.User)
+                .FirstOrDefaultAsync(m => m.TransacaoID == id);
+            if (tblTransacoes == null)
+            {
+                return NotFound();
+            }
+
+            return View(tblTransacoes);
+        }
+
+        // POST: TblTransacoes/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var tblTransacoes = await _context.Transacoes.FindAsync(id);
+            if (tblTransacoes != null)
+            {
+                _context.Transacoes.Remove(tblTransacoes);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool TblTransacoesExists(int id)
+        {
+            return _context.Transacoes.Any(e => e.TransacaoID == id);
+        }
+
+
+
+
+
+
+//UsersNormais-------------------------------------------------------------------------------------------------------------------------------
+  
+        // GET: TblTransacoes/Create
+        public async Task<IActionResult> Create()
+        {
+            // Obter o Id do utilizador logado
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            // Encontrar o utilizador associado ao email
+            var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
+
+            // Filtrar as contas associadas ao utilizador logado
+            var contas = await _context.Contas
+                .Where(c => c.UserFK == userAutent.UserID)
+                .ToListAsync();
+
+            // Construir o SelectList das contas filtradas
+            var selectList = contas.Select(c => new SelectListItem
+            {
+                Value = c.ContaID.ToString(),
+                Text = c.NomeConta
+            }).ToList();
+
+            // Passar o SelectList para a ViewBag
+            ViewBag.ContaFK = new SelectList(selectList, "Value", "Text");
+
+            return View();
+        }
+
+
+        // POST: TblTransacoes/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(TblTransacoes transacao, [FromForm] Dictionary<int, decimal> CategoriaValores)
@@ -100,12 +287,16 @@ namespace DWEB_NET.Controllers
                 if (account == null)
                 {
                     _logger.LogError($"Conta não encontrada para ContaFK: {transacao.ContaFK}");
-                    ModelState.AddModelError(string.Empty, "Conta não encontrada.");
+                    ModelState.AddModelError(string.Empty, "C   onta não encontrada.");
                     ViewData["ContaFK"] = new SelectList(_context.Contas, "ContaID", "NomeConta", transacao.ContaFK);
                     ViewData["TipoTransacao"] = new SelectList(new List<string> { "Ganho", "Gasto" });
                     ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria");
                     return View(transacao);
                 }
+
+                //A conta existe então podemos usar o nome dela
+                var NomeDaConta = account.NomeConta;
+                ViewBag.NomeConta = NomeDaConta;
 
                 _logger.LogInformation($"Conta encontrada: {account.NomeConta}");
 
@@ -125,18 +316,20 @@ namespace DWEB_NET.Controllers
 
                 foreach (KeyValuePair<int, decimal> entry in CategoriaValores)
                 {
-                    decimal value = entry.Value; 
+                    decimal value = entry.Value;
 
-                    if (decimal.Compare(value, 0) != 0) { 
-                    TblTransacoesCategorias data = new TblTransacoesCategorias();
-                    data.TransacaoFK = TransacaoID;
-                    data.CategoriaFK = entry.Key;
-                    data.Valor = entry.Value;
-                    _context.TransacoesCategorias.Add(data);
+                    if (decimal.Compare(value, 0) != 0)
+                    {
+                        TblTransacoesCategorias data = new TblTransacoesCategorias();
+                        data.TransacaoFK = TransacaoID;
+                        data.CategoriaFK = entry.Key;
+                        data.Valor = entry.Value;
+                        _context.TransacoesCategorias.Add(data);
                     }
                 }
-            _logger.LogInformation("Soma dos valores das categorias é igual ao valor da transação.");
-                
+
+                _logger.LogInformation("Soma dos valores das categorias é igual ao valor da transação.");
+
                 // Atualiza o saldo da conta
                 if (transacao.TipoTransacao == TblTransacoes.Tipo.Ganho)
                 {
@@ -148,6 +341,10 @@ namespace DWEB_NET.Controllers
                 }
 
                 _logger.LogInformation($"Saldo da conta {account.NomeConta} atualizado para: {account.Saldo}");
+
+                //Data de quando foi feita a transação
+                var DataAtual = DateTime.Now;
+                transacao.DataTime = DataAtual;
 
                 try
                 {
@@ -190,7 +387,7 @@ namespace DWEB_NET.Controllers
                 }
             }
             catch (Exception ex)
-         
+
             {
                 _logger.LogWarning("Modelo de transação inválido.");
                 foreach (var state in ModelState)
@@ -207,58 +404,9 @@ namespace DWEB_NET.Controllers
             ViewData["TipoTransacao"] = new SelectList(new List<string> { "Ganho", "Gasto" });
             ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria");
             return View(transacao);
-        }
-    
 
-
-        // GET: TblTransacoes/Index
-        public async Task<IActionResult> Index()
-        {
-            _logger.LogInformation("Acessando a página Index.");
-
-            var transacoes = _context.Transacoes.Include(t => t.ContaFK).Include(t => t.ListaTransacoesCategorias).ThenInclude(tc => tc.Categoria);
-            var transacoesList = await transacoes.ToListAsync();
-
-            _logger.LogInformation($"Total de transações encontradas: {transacoesList.Count}");
-
-            return View(transacoesList);
+//UsersNormais-------------------------------------------------------------------------------------------------------------------------------
         }
 
-        // GET: TblTransacoes/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            _logger.LogInformation($"Acessando os detalhes da transação ID: {id}");
-
-            if (id == null)
-            {
-                _logger.LogWarning("ID de transação não fornecido.");
-                return NotFound();
-            }
-
-            var transacao = await _context.Transacoes
-                .Include(t => t.ContaFK)
-                .Include(t => t.ListaTransacoesCategorias)
-                .ThenInclude(tc => tc.Categoria)
-                .FirstOrDefaultAsync(m => m.TransacaoID == id);
-
-            if (transacao == null)
-            {
-                _logger.LogWarning($"Transação ID {id} não encontrada.");
-                return NotFound();
-            }
-
-            return View(transacao);
-        }
-
-        // GET: TblTransacoes/Create
-        public IActionResult Create()
-        {
-            _logger.LogInformation("Acessando a página de criação de transação.");
-
-            ViewData["ContaFK"] = new SelectList(_context.Contas, "ContaID", "NomeConta");
-            ViewData["TipoTransacao"] = new SelectList(new List<string> { "Ganho", "Gasto" });
-            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria");
-            return View();
-        }
     }
 }

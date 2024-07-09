@@ -16,6 +16,8 @@ namespace DWEB_NET.Controllers
             { "libra", new Dictionary<string, double> { { "euro", 1.18 }, { "dolar", 1.29 }, { "iene", 152.94 } } }
         };
 
+
+
         [HttpGet]
         public IActionResult Moedas()
         {
@@ -51,6 +53,10 @@ namespace DWEB_NET.Controllers
 
         public IActionResult Index()
         {
+            if(User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Create", "TblTransacoes");
+            }
             return View();
         }
 
