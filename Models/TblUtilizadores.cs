@@ -28,20 +28,22 @@ namespace DWEB_NET.Models
         public string Email { get; set; }
 
         [StringLength(30)]
-        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
         [RegularExpression("[A-Z-Í][a-zãóíç]{1,14}", ErrorMessage = "Nome inválido")]
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [StringLength(30)]
-        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
         [RegularExpression("[A-Z-Í][a-zãóíç]{1,14}", ErrorMessage = "Nome inválido")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [StringLength(255)]
         public string? Descricao { get; set; }
 
-        public Boolean IsAdmin { get; set; } 
+        public Boolean IsAdmin { get; set; }
 
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string? Password { get; set; }
 
         /// <summary>
         /// atributo para funcionar como FK entre a tabela dos Utilizadores

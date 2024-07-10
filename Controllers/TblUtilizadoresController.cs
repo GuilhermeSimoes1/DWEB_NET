@@ -8,16 +8,24 @@ using Microsoft.EntityFrameworkCore;
 using DWEB_NET.Data;
 using DWEB_NET.Models;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text;
+using System.Security.Cryptography;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+
 
 namespace DWEB_NET.Controllers
 {
     public class TblUtilizadoresController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public TblUtilizadoresController(ApplicationDbContext context)
+        public TblUtilizadoresController(ApplicationDbContext context, IServiceProvider serviceProvider)
         {
             _context = context;
+            _userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
         }
 
         // GET: TblUtilizadores
@@ -73,19 +81,59 @@ namespace DWEB_NET.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserID,UserName,Email,FirstName,LastName,Descricao,UserAutent")] TblUtilizadores tblUtilizadores)
+        public async Task<IActionResult> Create([Bind("UserID,UserName,Email,FirstName,LastName,Descricao,UserAutent,Password")] TblUtilizadores tblUtilizadores)
         {
-            if (ModelState.IsValid)
             {
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                tblUtilizadores.UserAutent = userId;
+
+
                 _context.Add(tblUtilizadores);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                
+                var user = new IdentityUser
+                {
+                    UserName = tblUtilizadores.UserName,
+                    Email = tblUtilizadores.Email,
+                    PasswordHash = HashPassword(tblUtilizadores.Password),
+                    EmailConfirmed = true,
+                };
+                var result = await _userManager.CreateAsync(user);
+
+                if (result.Succeeded)
+                {
+                    
+                    tblUtilizadores.UserAutent = user.Id; 
+
+                    
+                    _context.Update(tblUtilizadores);
+                    await _context.SaveChangesAsync();
+                  
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                }
             }
             return View(tblUtilizadores);
         }
 
-        // GET: TblUtilizadores/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+
+    private string HashPassword(string password)
+    {
+        var passwordHasher = new PasswordHasher<IdentityUser>();
+        return passwordHasher.HashPassword(null, password);
+    }
+
+
+    // GET: TblUtilizadores/Edit/5
+    public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -93,6 +141,7 @@ namespace DWEB_NET.Controllers
             }
 
             var tblUtilizadores = await _context.Utilizadores.FindAsync(id);
+
             if (tblUtilizadores == null)
             {
                 return NotFound();
@@ -105,31 +154,62 @@ namespace DWEB_NET.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserID,UserName,Email,FirstName,LastName,Descricao,UserAutent")] TblUtilizadores tblUtilizadores)
+        public async Task<IActionResult> Edit(int id, [Bind("UserID,UserName,Email,FirstName,LastName,Descricao,UserAutent,Password")] TblUtilizadores tblUtilizadores)
         {
             if (id != tblUtilizadores.UserID)
             {
                 return NotFound();
             }
 
-                try
+            try
+            {
+                // Encontra o usuário correspondente em AspNetUsers
+                var user = await _userManager.FindByIdAsync(tblUtilizadores.UserAutent);
+                if (user == null)
                 {
-                    _context.Update(tblUtilizadores);
-                    await _context.SaveChangesAsync();
+                    return NotFound(); // Se não encontrar o usuário, retorna NotFound
                 }
-                catch (DbUpdateConcurrencyException)
+
+                // Atualiza os dados do usuário em AspNetUsers com os dados da tabela TblUtilizadores
+                user.UserName = tblUtilizadores.UserName;
+                user.Email = tblUtilizadores.Email;
+
+                // Se uma nova senha foi fornecida, atualiza também a senha em AspNetUsers
+                if (!string.IsNullOrEmpty(tblUtilizadores.Password))
                 {
-                    if (!TblUtilizadoresExists(tblUtilizadores.UserID))
+                    user.PasswordHash = HashPassword(tblUtilizadores.Password);
+                }
+
+                // Salva as mudanças no usuário em AspNetUsers
+                var updateResult = await _userManager.UpdateAsync(user);
+                if (!updateResult.Succeeded)
+                {
+                    foreach (var error in updateResult.Errors)
                     {
-                        return NotFound();
+                        ModelState.AddModelError(string.Empty, error.Description);
                     }
-                    else
-                    {
-                        return RedirectToAction(nameof(Index));
-                    }
+                    return View(tblUtilizadores); // Retorna a view de edição com os erros de validação
+                }
+
+                // Atualiza os dados na tabela TblUtilizadores
+                _context.Update(tblUtilizadores);
+                await _context.SaveChangesAsync();
             }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!TblUtilizadoresExists(tblUtilizadores.UserID))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+
             return RedirectToAction(nameof(Index));
         }
+
 
         // GET: TblUtilizadores/Delete/5
         public async Task<IActionResult> Delete(int? id)
