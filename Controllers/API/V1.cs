@@ -1,176 +1,128 @@
-﻿using Azure.Core;
+﻿
 using DWEB_NET.Data;
 using DWEB_NET.Models;
-using Microsoft.AspNetCore.Authentication;
+using DWEB_NET.Models.DTO;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System.ComponentModel.DataAnnotations;
+using System;
 using System.Linq;
-using System.Security.Policy;
-using System.Text.Encodings.Web;
-using System.Text;
 using System.Threading.Tasks;
 
-
-namespace DWEB_NET.Controllers.API
+[Route("api/[controller]")]
+[ApiController]
+public class V1Controller : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class V1 : ControllerBase
-    {
-        private readonly ApplicationDbContext _context;
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IEmailSender _emailSender;
-        private readonly ILogger<V1> _logger;
+    private readonly ApplicationDbContext _context;
+    private readonly SignInManager<IdentityUser> _signInManager;
+    private readonly UserManager<IdentityUser> _userManager;
+    private readonly ILogger<V1Controller> _logger;
 
-        public V1(ApplicationDbContext context, SignInManager<IdentityUser> signInManager, ILogger<V1> logger, UserManager<IdentityUser> userManager, IEmailSender emailSender)
+    public V1Controller(ApplicationDbContext context, SignInManager<IdentityUser> signInManager, ILogger<V1Controller> logger, UserManager<IdentityUser> userManager)
+    {
+        _context = context;
+        _signInManager = signInManager;
+        _logger = logger;
+        _userManager = userManager;
+    }
+
+    [HttpPost]
+    [Route("Login")]
+    public async Task<IActionResult> Login([FromBody] LoginModel ola)
+    {
+        if (string.IsNullOrEmpty(ola.Email) || string.IsNullOrEmpty(ola.Password))
         {
-            _context = context;
-            _signInManager = signInManager;
-            _logger = logger;
-            _userManager = userManager;
-            _emailSender = emailSender;
+            return BadRequest("Invalid login request.");
         }
 
-
-        [HttpPost]
-        [Route("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        try
         {
-            if (ModelState.IsValid)
+            var resultUser = await _userManager.FindByEmailAsync(ola.Email);
+
+            if (resultUser != null)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, lockoutOnFailure: false);
-                if (result.Succeeded)
+                var passWorks = new PasswordHasher<IdentityUser>().VerifyHashedPassword(resultUser, resultUser.PasswordHash, ola.Password);
+
+                if (passWorks == PasswordVerificationResult.Success)
                 {
-                    _logger.LogInformation("User logged in.");
-                    return Ok(new { message = "Login successful" });
-                }
-                if (result.RequiresTwoFactor)
-                {
-                    return StatusCode(403, new { message = "Requires two-factor authentication" });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return StatusCode(403, new { message = "User account locked out" });
+                    await _signInManager.SignInAsync(resultUser, ola.RememberMe); 
+
+                    var user = _context.Utilizadores.FirstOrDefault(u => u.UserAutent == resultUser.Id);
+
+                    if (user != null)
+                    {
+                        return Ok(user);
+                    }
+                    else
+                    {
+                        return BadRequest("User details not found");
+                    }
                 }
                 else
                 {
-                    return Unauthorized(new { message = "Invalid login attempt" });
+                    return BadRequest("Invalid password");
                 }
             }
-            return BadRequest(ModelState);
-        }
-
-        [HttpPost]
-        [Route("Register")]
-        public async Task<IActionResult> Register([FromBody] RegisterModel model)
-        {
-            if (ModelState.IsValid)
+            else
             {
-                var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
-                var result = await _userManager.CreateAsync(user, model.Password);
-
-                if (result.Succeeded)
-                {
-                    _logger.LogInformation("User created a new account with password.");
-
-                    var userId = user.Id;
-
-                    var utilizador = new TblUtilizadores
-                    {
-                        UserAutent = userId,
-                        UserName = model.UserName,
-                        Email = model.Email,
-                    };
-
-                    _context.Utilizadores.Add(utilizador);
-                    await _context.SaveChangesAsync();
-
-                    var contaPrincipal = new TblContas
-                    {
-                        NomeConta = "Conta Principal",
-                        Saldo = 0,
-                        UserFK = utilizador.UserID
-                    };
-
-                    _context.Contas.Add(contaPrincipal);
-                    await _context.SaveChangesAsync();
-
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                    "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = string.Empty },
-                        protocol: Request.Scheme);
-
-                    await _emailSender.SendEmailAsync(model.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    return Ok(new { message = "Registration successful. Please confirm your email." });
-                }
-
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
+                return BadRequest("User not found");
             }
-
-            // Adiciona logs detalhados de erros de validação
-            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
-            _logger.LogError("ModelState is invalid: " + string.Join("; ", errors));
-
-            return BadRequest(ModelState);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message); 
         }
     }
-}
 
+    [HttpPost]
+    [Route("Register")]
+    public async Task<IActionResult> Register([FromBody] TblUtilizadores model)
+    {
+        try
+        {
+            var user = new IdentityUser { 
+                UserName = model.UserName, 
+                Email = model.Email,
+                Id = Guid.NewGuid().ToString(),
+                EmailConfirmed = true
+            };
 
-public class RegisterModel
-{
-    [Required]
-    [Display(Name = "Nome")]
-    public string FirstName { get; set; }
+            var result = await _userManager.CreateAsync(user, model.Password); 
 
-    [Required]
-    [Display(Name = "Apelido")]
-    public string LastName { get; set; }
+            if (result.Succeeded)
+            {
+                _logger.LogInformation("User created a new account with password.");
 
-    [Required]
-    [Display(Name = "Username")]
-    public string UserName { get; set; }
+                var tblUtilizadores = new TblUtilizadores
+                {
+                    UserAutent = user.Id,
+                    UserName = model.UserName,
+                    Email = model.Email,
+                    Password = user.PasswordHash,
+                    FirstName = model.UserName,
+                    LastName = model.UserName,
+                    IsAdmin = false,
+                    Descricao = model.Descricao
+                };
 
-    [Required]
-    [EmailAddress]
-    [Display(Name = "Email")]
-    public string Email { get; set; }
+                _context.Utilizadores.Add(tblUtilizadores);
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Registration successful. Please confirm your email." });
+            }
 
-    [Required]
-    [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-    [DataType(DataType.Password)]
-    [Display(Name = "Password")]
-    public string Password { get; set; }
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
 
-    [DataType(DataType.Password)]
-    [Display(Name = "Confirm password")]
-    [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-    public string ConfirmPassword { get; set; }
-}
-
-
-public class LoginModel
-{
-    [Required]
-    [EmailAddress]
-    public string Email { get; set; }
-
-    [Required]
-    [DataType(DataType.Password)]
-    public string Password { get; set; }
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+            _logger.LogError("Registration failed: " + string.Join("; ", errors));
+            return BadRequest(ModelState);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError($"An error occurred during registration: {ex.Message}");
+            return StatusCode(500, new { message = "An error occurred. Please try again." });
+        }
+    }
 }
