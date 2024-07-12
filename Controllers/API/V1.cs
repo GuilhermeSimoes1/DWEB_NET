@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-﻿using DWEB_NET.Data;
+using DWEB_NET.Data;
 using DWEB_NET.Models;
 using DWEB_NET.Models.DTO;
 using Microsoft.AspNetCore.Identity;
@@ -8,7 +7,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-=======
 ﻿using Azure.Core;
 using DWEB_NET.Data;
 using DWEB_NET.Models;
@@ -27,7 +25,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
->>>>>>> Stashed changes
 
 namespace DWEB_NET.Controllers
 {
@@ -38,7 +35,6 @@ namespace DWEB_NET.Controllers
         private readonly ApplicationDbContext _context;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
-<<<<<<< Updated upstream
         private readonly ILogger<V1Controller> _logger;
 
         public V1Controller(ApplicationDbContext context, SignInManager<IdentityUser> signInManager, ILogger<V1Controller> logger, UserManager<IdentityUser> userManager)
@@ -55,16 +51,16 @@ namespace DWEB_NET.Controllers
         {
             try
             {
-               
+
                 var user = _context.Utilizadores.FirstOrDefault(u => u.UserID == userId);
                 if (user == null)
                 {
                     return NotFound("User not found.");
                 }
-               
+
                 if (user.IsAdmin)
                 {
-                    
+
                     var orcamentosAdmin = _context.Orcamentos.Select(o => new
                     {
                         o.OrcamentoID,
@@ -94,22 +90,13 @@ namespace DWEB_NET.Controllers
             }
             catch (Exception ex)
             {
-                
+
                 _logger.LogError($"An error occurred while retrieving budgets: {ex.Message}");
                 return StatusCode(500, new { message = "Failed to retrieve budgets. Please try again." });
             }
-=======
-        private readonly IEmailSender _emailSender;
-        private readonly ILogger<V1> _logger;
 
-        public V1(ApplicationDbContext context, SignInManager<IdentityUser> signInManager, ILogger<V1> logger, UserManager<IdentityUser> userManager, IEmailSender emailSender)
-        {
-            _context = context;
-            _signInManager = signInManager;
-            _logger = logger;
-            _userManager = userManager;
-            _emailSender = emailSender;
         }
+     
 
 
         private readonly Dictionary<TblTransacoes.Tipo, List<int>> categoriasPorTipo = new Dictionary<TblTransacoes.Tipo, List<int>>
@@ -377,7 +364,7 @@ namespace DWEB_NET.Controllers
                 }).ToListAsync();
 
             return Ok(transacoes);
->>>>>>> Stashed changes
+
         }
 
 
@@ -481,108 +468,7 @@ namespace DWEB_NET.Controllers
             }
         }
 
-        [HttpPost]
-        [Route("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel model)
-        {
-            if (string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.Password))
-            {
-                return BadRequest("Invalid login request.");
-            }
-
-            try
-            {
-                var resultUser = await _userManager.FindByEmailAsync(model.Email);
-
-                if (resultUser != null)
-                {
-                    var passWorks = new PasswordHasher<IdentityUser>().VerifyHashedPassword(resultUser, resultUser.PasswordHash, model.Password);
-
-                    if (passWorks == PasswordVerificationResult.Success)
-                    {
-                        await _signInManager.SignInAsync(resultUser, model.RememberMe);
-
-                        var user = _context.Utilizadores.FirstOrDefault(u => u.UserAutent == resultUser.Id);
-
-                        if (user != null)
-                        {
-                            return Ok(user);
-                        }
-                        else
-                        {
-                            return BadRequest("User details not found");
-                        }
-                    }
-                    else
-                    {
-                        return BadRequest("Invalid password");
-                    }
-                }
-                else
-                {
-                    return BadRequest("User not found");
-                }
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPost]
-        [Route("Register")]
-        public async Task<IActionResult> Register([FromBody] TblUtilizadores model)
-        {
-            try
-            {
-                var user = new IdentityUser
-                {
-                    UserName = model.UserName,
-                    Email = model.Email,
-                    Id = Guid.NewGuid().ToString(),
-                    EmailConfirmed = true
-                };
-
-                var result = await _userManager.CreateAsync(user, model.Password);
-
-                if (result.Succeeded)
-                {
-                    _logger.LogInformation("User created a new account with password.");
-
-                    var tblUtilizadores = new TblUtilizadores
-                    {
-                        UserAutent = user.Id,
-                        UserName = model.UserName,
-                        Email = model.Email,
-                        Password = user.PasswordHash,
-                        FirstName = model.FirstName, // Assuming FirstName and LastName are available in model
-                        LastName = model.LastName,
-                        IsAdmin = false
-                        
-                    };
-
-                    _context.Utilizadores.Add(tblUtilizadores);
-                    await _context.SaveChangesAsync();
-                    return Ok(new { message = "Registration successful. Please confirm your email." });
-                }
-
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-
-                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
-                _logger.LogError("Registration failed: " + string.Join("; ", errors));
-                return BadRequest(ModelState);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"An error occurred during registration: {ex.Message}");
-                return StatusCode(500, new { message = "An error occurred. Please try again." });
-            }
-        }
-
-
+       
         [HttpGet]
         [Route("Contas")]
         public IActionResult GetContas(int userFK)

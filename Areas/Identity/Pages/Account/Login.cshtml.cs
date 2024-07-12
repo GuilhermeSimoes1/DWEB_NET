@@ -86,7 +86,7 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if(User.Identity.IsAuthenticated)
+            if (User.Identity.IsAuthenticated)
             {
                 Response.Redirect("/");
             }

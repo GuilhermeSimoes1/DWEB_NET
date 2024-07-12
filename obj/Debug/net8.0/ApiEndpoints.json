@@ -1,30 +1,8 @@
 [
   {
-<<<<<<< Updated upstream
     "ContainingType": "DWEB_NET.Controllers.V1Controller",
     "Method": "GetContas",
     "RelativePath": "api/V1/Contas",
-=======
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
-    "Method": "CreateTransacao",
-    "RelativePath": "api/V1/CreateTransacao",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "transacao",
-        "Type": "DWEB_NET.Models.TransacoesDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
-    "Method": "GetCategorias",
-    "RelativePath": "api/V1/GetCategorias",
->>>>>>> Stashed changes
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -38,7 +16,6 @@
     "ReturnTypes": []
   },
   {
-<<<<<<< Updated upstream
     "ContainingType": "DWEB_NET.Controllers.V1Controller",
     "Method": "AdicionarConta",
     "RelativePath": "api/V1/Contas",
@@ -98,6 +75,64 @@
   },
   {
     "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "CreateTransacao",
+    "RelativePath": "api/V1/CreateTransacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transacao",
+        "Type": "DWEB_NET.Models.TransacoesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "GetCategorias",
+    "RelativePath": "api/V1/GetCategorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "GetHistoricoTransacoes",
+    "RelativePath": "api/V1/GetHistoricoTransacoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "GetUserAccounts",
+    "RelativePath": "api/V1/GetUserAccounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
     "Method": "Login",
     "RelativePath": "api/V1/Login",
     "HttpMethod": "POST",
@@ -105,9 +140,19 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "DWEB_NET.Models.DTO.LoginModel",
-        "IsRequired": true
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "rememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -169,11 +214,6 @@
     "ContainingType": "DWEB_NET.Controllers.V1Controller",
     "Method": "GetOrcamentos",
     "RelativePath": "api/V1/Orcamentos/{userId}",
-=======
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
-    "Method": "GetHistoricoTransacoes",
-    "RelativePath": "api/V1/GetHistoricoTransacoes",
->>>>>>> Stashed changes
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -181,63 +221,13 @@
       {
         "Name": "userId",
         "Type": "System.Int32",
-<<<<<<< Updated upstream
         "IsRequired": true
-=======
-        "IsRequired": false
->>>>>>> Stashed changes
       }
     ],
     "ReturnTypes": []
   },
   {
-<<<<<<< Updated upstream
     "ContainingType": "DWEB_NET.Controllers.V1Controller",
-=======
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
-    "Method": "GetUserAccounts",
-    "RelativePath": "api/V1/GetUserAccounts",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
-    "Method": "Login",
-    "RelativePath": "api/V1/Login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Password",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "rememberMe",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
->>>>>>> Stashed changes
     "Method": "Register",
     "RelativePath": "api/V1/Register",
     "HttpMethod": "POST",
@@ -245,16 +235,11 @@
     "Order": 0,
     "Parameters": [
       {
-<<<<<<< Updated upstream
-        "Name": "model",
-=======
         "Name": "user",
->>>>>>> Stashed changes
         "Type": "DWEB_NET.Models.TblUtilizadores",
         "IsRequired": true
       }
     ],
-<<<<<<< Updated upstream
     "ReturnTypes": []
   },
   {
@@ -281,8 +266,6 @@
         "IsRequired": false
       }
     ],
-=======
->>>>>>> Stashed changes
     "ReturnTypes": []
   }
 ]

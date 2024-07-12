@@ -86,7 +86,7 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
 
             [Required]
             [Display(Name = "Username")]
-            public string UserName { get; set; } 
+            public string UserName { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -129,7 +129,7 @@ namespace DWEB_NET.Areas.Identity.Pages.Account
                     {
                         NomeConta = "Conta Principal",
                         Saldo = 0,
-                        UserFK = utilizador.UserID 
+                        UserFK = utilizador.UserID
                     };
 
                     _context.Contas.Add(contaPrincipal);
