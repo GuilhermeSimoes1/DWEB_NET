@@ -21,6 +21,7 @@ namespace DWEB_NET.Models
 
         [StringLength(100)]
         [Required(ErrorMessage = "O {0} é de preenchimento obrigatório.")]
+        [Display(Name = "Nome de Utilizador")]
         public string UserName { get; set; }
 
         [StringLength(50)]
@@ -29,13 +30,16 @@ namespace DWEB_NET.Models
 
         [StringLength(30)]
         [RegularExpression("[A-Z-Í][a-zãóíç]{1,14}", ErrorMessage = "Nome inválido")]
+        [Display(Name = "Nome")]
         public string? FirstName { get; set; }
 
         [StringLength(30)]
         [RegularExpression("[A-Z-Í][a-zãóíç]{1,14}", ErrorMessage = "Nome inválido")]
+        [Display(Name = "Apelido")]
         public string? LastName { get; set; }
 
         [StringLength(255)]
+        [Display(Name = "Descrição")]
         public string? Descricao { get; set; }
 
         public Boolean IsAdmin { get; set; }

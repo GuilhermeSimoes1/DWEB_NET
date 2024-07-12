@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DWEB_NET.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240712103819_Ajustes model utilizadores")]
-    partial class Ajustesmodelutilizadores
+    [Migration("20240712153906_Second-Migration")]
+    partial class SecondMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

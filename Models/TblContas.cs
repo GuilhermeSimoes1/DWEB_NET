@@ -14,14 +14,18 @@ namespace DWEB_NET.Models
 		[Key]
 		public int ContaID { get; set; }
 
-		public string NomeConta { get; set; } = "Conta";
+        [Display(Name = "Conta")]
+        public string NomeConta { get; set; } = "Conta";
 
-		public decimal Saldo { get; set; }
+        [Display(Name = "Saldo")]
+        public decimal Saldo { get; set; }
         
         [ForeignKey(nameof(User))]
 		[Display(Name = "Utilizador associado")]
 		public int UserFK { get; set; }
-		public TblUtilizadores User { get; set; }
+
+        [Display(Name = "Utilizador")]
+        public TblUtilizadores User { get; set; }
 
         public ICollection<TblTransacoes> ListaTransacoes { get; set; }
     }

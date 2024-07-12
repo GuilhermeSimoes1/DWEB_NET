@@ -351,6 +351,11 @@ namespace DWEB_NET.Controllers
         [HttpGet("GetHistoricoTransacoes")]
         public async Task<IActionResult> GetHistoricoTransacoes([FromQuery] int userId)
         {
+            if (userId <= 0)
+            {
+                return BadRequest("Invalid user ID");
+            }
+
             var transacoes = await _context.Transacoes
                 .Where(t => t.UserFK == userId)
                 .Select(t => new
@@ -360,11 +365,17 @@ namespace DWEB_NET.Controllers
                     t.TipoTransacao,
                     t.Descricao,
                     t.DataTime,
-                    Conta = t.Conta.NomeConta
+                    Conta = t.Conta.NomeConta,
+                    Email = t.User.Email
+
                 }).ToListAsync();
 
-            return Ok(transacoes);
+            if (!transacoes.Any())
+            {
+                return NotFound("No transactions found for the given user ID");
+            }
 
+            return Ok(transacoes);
         }
 
 
@@ -644,13 +655,6 @@ namespace DWEB_NET.Controllers
                 return StatusCode(500, new { message = "Failed to update user details. Please try again." });
             }
         }
-
-
-
-
-
-
-
 
 
 

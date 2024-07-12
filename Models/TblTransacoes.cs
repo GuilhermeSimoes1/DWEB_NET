@@ -21,13 +21,17 @@
             [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //Incrementa automaticamente
             public int TransacaoID { get; set; }
 
+            [Display(Name = "Data")] 
             public DateTime DataTime { get; set; }
 
+            [Display(Name = "Tipo de Transação")]
             public Tipo TipoTransacao { get; set; }         
 
             [StringLength(100)]
+            [Display(Name = "Descrição")]
             public string? Descricao { get; set; }
 
+            [Display(Name = "Valor da Transação")]
             public required decimal ValorTransacao { get; set; }
 
             [ForeignKey(nameof(Conta))]

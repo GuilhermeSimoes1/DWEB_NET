@@ -9,7 +9,7 @@
 @if (ViewBag.IsAdmin)
 {
     <p>
-        <a asp-action="Create">Create New</a>
+        <a asp-action="Create" class="btn btn-primary" style="margin-bottom: 35px;">Criar um novo Utilizador</a>
     </p>
 }
 
@@ -54,13 +54,12 @@
                     @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
+                    <a asp-action="Edit" asp-route-id="@item.UserID" class="btn btn-warning" style="margin-left: 10px;">Editar</a>
 
-                    <a asp-action="Edit" asp-route-id="@item.UserID">Edit</a>
                     @if (ViewBag.IsAdmin)
                     {
-                        <a asp-action="Delete" asp-route-id="@item.UserID"><p style="display:inline; color: black; margin-right:5px; margin-left:5px">|</p> Delete</a>
+                        <a asp-action="Delete" asp-route-id="@item.UserID" class="btn btn-danger" style="margin-left: 10px;">Apagar</a>
                     }
-                    
                 </td>
             </tr>
         }

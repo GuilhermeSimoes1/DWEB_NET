@@ -4,11 +4,10 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
+<h1>Eliminar Conta de Orçamentos</h1>
+<br/>
+<h4>Tem a certeza que deseja eliminar?</h4>
 <div>
-    <h4>TblContas</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -33,7 +32,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="ContaID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Apagar Conta" class="btn btn-danger" style="margin-top: 10px" />
+        <a asp-action="Index" class="btn btn-link" style="margin-left: 10px; margin-top: 10px">Voltar</a>
     </form>
 </div>
