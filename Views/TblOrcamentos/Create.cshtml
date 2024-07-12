@@ -8,7 +8,7 @@
 
 <br />
 <br />
-<h1>Lista de Orcamentos</h1>
+<h1>Orçamentos</h1>
 <br />
 
 <h2>Adicionar Orçamento</h2>
@@ -48,15 +48,15 @@
                 <select asp-for="UserFK" class="form-control" asp-items="ViewBag.UserFK"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary"/>
-                <button type="button" class="hero-button" onclick="location.href='@Url.Action("Details", "TblOrcamentos")'">Ver Detalhes</button>
+                <input type="submit" value="Criar Orcamento" class="btn btn-primary"/>
+                <button type="button" class="btn btn-info" onclick="location.href='@Url.Action("Details", "TblOrcamentos")'">Ver Detalhes</button>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    
 </div>
 
 @section Scripts {

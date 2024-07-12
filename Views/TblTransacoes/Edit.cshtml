@@ -12,44 +12,41 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="TransacaoID" />
             <div class="form-group">
-                <label asp-for="DataTime" class="control-label"></label>
+                <strong><label asp-for="DataTime" class="control-label"></label>:</strong>
                 <input asp-for="DataTime" class="form-control" />
                 <span asp-validation-for="DataTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoTransacao" class="control-label"></label>
+                <strong><label asp-for="TipoTransacao" class="control-label"></label>:</strong>
                 <select asp-for="TipoTransacao" class="form-control"></select>
                 <span asp-validation-for="TipoTransacao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
+                <strong><label asp-for="Descricao" class="control-label"></label>:</strong>
                 <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ValorTransacao" class="control-label"></label>
+                <strong><label asp-for="ValorTransacao" class="control-label"></label>:</strong>
                 <input asp-for="ValorTransacao" class="form-control" />
                 <span asp-validation-for="ValorTransacao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ContaFK" class="control-label"></label>
+                <strong><label asp-for="ContaFK" class="control-label"></label>:</strong>
                 <select asp-for="ContaFK" class="form-control" asp-items="ViewBag.ContaFK"></select>
                 <span asp-validation-for="ContaFK" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UserFK" class="control-label"></label>
+                <strong><label asp-for="UserFK" class="control-label"></label>:</strong>
                 <select asp-for="UserFK" class="form-control" asp-items="ViewBag.UserFK"></select>
                 <span asp-validation-for="UserFK" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group" style="display:flex;">
+                <input type="submit" value="Guardar" class="btn btn-primary" style="margin-top:10px;" />
+                <a asp-action="Index" class="btn btn-link" style="margin-left: 10px; margin-top: 10px">Voltar</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

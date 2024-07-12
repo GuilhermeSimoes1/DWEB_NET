@@ -16,21 +16,21 @@
                     <form asp-action="Create" id="transacaoForm">
                         <input type="hidden" asp-for="UserFK" value="@ViewBag.UserFK" />
                         <div class="form-group">
-                            <label asp-for="ValorTransacao" class="control-label">Valor</label>
+                            <strong><label asp-for="ValorTransacao" class="control-label">Valor</label>:</strong>
                             <input asp-for="ValorTransacao" class="form-control" id="ValorTransacao" type="number" step="0.01" />
                             <span asp-validation-for="ValorTransacao" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="ContaFK" class="control-label">Selecionar Conta</label>
+                            <strong><label asp-for="ContaFK" class="control-label">Selecionar Conta</label>:</strong>
                             <select asp-for="ContaFK" class="form-control" asp-items="ViewBag.ContaFK" id="ContaFK"></select>
                             <span asp-validation-for="ContaFK" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label>Valor da Conta</label>
+                            <strong><label>Valor da Conta</label>:</strong>
                             <input type="text" class="form-control" id="ValorConta" readonly />
                         </div>
                         <div class="form-group">
-                            <label asp-for="TipoTransacao" class="control-label">Tipo de Transação</label>
+                            <strong><label asp-for="TipoTransacao" class="control-label">Tipo de Transação</label>:</strong>
                             <select id="TipoTransacao" name="TipoTransacao" asp-for="TipoTransacao" class="form-control">
                                 <option value="">Selecione o tipo de transação</option>
                                 <option value="Gasto">Gasto</option>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label asp-for="Descricao" class="control-label">Descrição</label>
+                            <strong><label asp-for="Descricao" class="control-label">Descrição</label></strong>
                             <input asp-for="Descricao" class="form-control" />
                             <span asp-validation-for="Descricao" class="text-danger"></span>
                         </div>
