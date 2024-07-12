@@ -1,22 +1,203 @@
 [
   {
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
-    "Method": "GetAccount",
-    "RelativePath": "api/V1/GetAccount",
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "GetContas",
+    "RelativePath": "api/V1/Contas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userFK",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "DWEB_NET.Controllers.API.V1",
-    "Method": "GetUsers",
-    "RelativePath": "api/V1/GetUsers",
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "AdicionarConta",
+    "RelativePath": "api/V1/Contas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "DWEB_NET.Models.DTO.ContaModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "OldEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "UpdateConta",
+    "RelativePath": "api/V1/Contas/{contaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "DWEB_NET.Models.DTO.ContaModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "DeleteConta",
+    "RelativePath": "api/V1/Contas/{contaId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "Login",
+    "RelativePath": "api/V1/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "DWEB_NET.Models.DTO.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "AdicionarOrcamento",
+    "RelativePath": "api/V1/Orcamentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "DWEB_NET.Models.DTO.OrcamentoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "EditarOrcamento",
+    "RelativePath": "api/V1/Orcamentos/{orcamentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orcamentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "DWEB_NET.Models.DTO.OrcamentoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "ExcluirOrcamento",
+    "RelativePath": "api/V1/Orcamentos/{orcamentoId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orcamentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "GetOrcamentos",
+    "RelativePath": "api/V1/Orcamentos/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "Register",
+    "RelativePath": "api/V1/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "DWEB_NET.Models.TblUtilizadores",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DWEB_NET.Controllers.V1Controller",
+    "Method": "UpdateUtilizador",
+    "RelativePath": "api/V1/Utilizadores",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "DWEB_NET.Models.TblUtilizadores",
+        "IsRequired": true
+      },
+      {
+        "Name": "UserFK",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "oldEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]

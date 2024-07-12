@@ -234,16 +234,16 @@ namespace DWEB_NET.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-          
+
             var tblUtilizadores = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserID == id);
-            
+
             if (tblUtilizadores != null)
             {
-                
+
                 var user = await _userManager.FindByIdAsync(tblUtilizadores.UserAutent);
                 _context.Utilizadores.Remove(tblUtilizadores);
 
-                
+
                 if (user != null)
                 {
                     var result = await _userManager.DeleteAsync(user);
@@ -256,12 +256,12 @@ namespace DWEB_NET.Controllers
             }
             else
             {
-                
+
                 ModelState.AddModelError("", "Utilizadores record not found.");
                 return View();
             }
 
-          
+
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
