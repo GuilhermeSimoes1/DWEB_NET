@@ -14,13 +14,10 @@ namespace DWEB_NET.Models
 		[Key]
 		public int ContaID { get; set; }
 
-		
 		public string NomeConta { get; set; } = "Conta";
-
 
 		public decimal Saldo { get; set; }
         
-
         [ForeignKey(nameof(User))]
 		[Display(Name = "Utilizador associado")]
 		public int UserFK { get; set; }

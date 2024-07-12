@@ -17,7 +17,7 @@ namespace DWEB_NET.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<TblTransacoesController> _logger;
-        private readonly List<int> adminUserIds = new List<int> { 1,2,3,4,5 };
+        private readonly List<int> adminUserIds = new List<int> { 1, 2, 3, 4, 5 };
 
         // Dictionary para mapear tipos de transação aos IDs das categorias correspondentes
         private readonly Dictionary<TblTransacoes.Tipo, List<int>> categoriasPorTipo = new Dictionary<TblTransacoes.Tipo, List<int>>
@@ -80,7 +80,7 @@ namespace DWEB_NET.Controllers
 
             // Encontrar o utilizador associado ao email
             var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
-            if(userAutent.IsAdmin == true)
+            if (userAutent.IsAdmin == true)
 
             {
 
@@ -88,13 +88,13 @@ namespace DWEB_NET.Controllers
                 return View(await applicationDbContextAdmin.ToListAsync());
             }
 
-                var applicationDbContextUser = _context.Transacoes.Where(t => t.UserFK == userAutent.UserID ).Include(t => t.Conta).Include(t => t.User);
-                return View(await applicationDbContextUser.ToListAsync());
+            var applicationDbContextUser = _context.Transacoes.Where(t => t.UserFK == userAutent.UserID).Include(t => t.Conta).Include(t => t.User);
+            return View(await applicationDbContextUser.ToListAsync());
 
         }
 
 
-        
+
 
         // GET: TblTransacoes/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -215,33 +215,65 @@ namespace DWEB_NET.Controllers
 
 
 
-//UsersNormais-------------------------------------------------------------------------------------------------------------------------------
-  
+        //UsersNormais-------------------------------------------------------------------------------------------------------------------------------
+
         // GET: TblTransacoes/Create
         public async Task<IActionResult> Create()
         {
-            // Obter o Id do utilizador logado
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            // Encontrar o utilizador associado ao email
-            var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
-
-            // Filtrar as contas associadas ao utilizador logado
-            var contas = await _context.Contas
-                .Where(c => c.UserFK == userAutent.UserID)
-                .ToListAsync();
-
-            // Construir o SelectList das contas filtradas
-            var selectList = contas.Select(c => new SelectListItem
+            try
             {
-                Value = c.ContaID.ToString(),
-                Text = c.NomeConta
-            }).ToList();
+                // Obter o Id do utilizador logado
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            // Passar o SelectList para a ViewBag
-            ViewBag.ContaFK = new SelectList(selectList, "Value", "Text");
+                if (userId != null)
+                {
+                    // Encontrar o utilizador associado ao email
+                    var userAutent = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserAutent == userId);
 
-            return View();
+                    if (userAutent != null)
+                    {
+                        // Filtrar as contas associadas ao utilizador logado
+                        var contas = await _context.Contas
+                            .Where(c => c.UserFK == userAutent.UserID)
+                            .ToListAsync();
+
+                        if (contas != null && contas.Any())
+                        {
+                            // Construir o SelectList das contas filtradas
+                            var selectList = contas.Select(c => new SelectListItem
+                            {
+                                Value = c.ContaID.ToString(),
+                                Text = c.NomeConta
+                            }).ToList();
+
+                            // Passar o SelectList para a ViewBag
+                            ViewBag.ContaFK = new SelectList(selectList, "Value", "Text");
+
+                            return View();
+                        }
+                        else
+                        {
+                            ModelState.AddModelError(string.Empty, "Não há contas associadas a este utilizador.");
+                            return View();
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Utilizador não encontrado.");
+                        return View();
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "ID de utilizador não encontrado.");
+                    return View();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao processar pedido para criar transação: {ex.Message}");
+                return StatusCode(500, "Erro interno ao processar o pedido.");
+            }
         }
 
 
@@ -405,7 +437,7 @@ namespace DWEB_NET.Controllers
             ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria");
             return View(transacao);
 
-//UsersNormais-------------------------------------------------------------------------------------------------------------------------------
+            //UsersNormais-------------------------------------------------------------------------------------------------------------------------------
         }
 
     }
