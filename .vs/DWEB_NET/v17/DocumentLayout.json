@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:controllers\\api\\v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
@@ -51,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|c:\\users\\afons\\onedrive\\ambiente de trabalho\\dweb\\dweb_net\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{406F8310-A846-4406-85CB-5C5F174AF961}|DWEB_NET.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,12 +78,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -92,48 +88,50 @@
               "RelativeDocumentMoniker": "Controllers\\API\\V1.cs",
               "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\API\\V1.cs",
               "RelativeToolTip": "Controllers\\API\\V1.cs",
-              "ViewState": "AQIAAEABAAAAAAAAAAAAwHMBAAAAAAAA",
+              "ViewState": "AQIAAFgBAAAAAAAAAAAYwHYBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T17:55:22.297Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "dbo.Contas [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Contas.sql",
               "ToolTip": "dbo.Contas [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-12T01:37:58.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-12T01:37:58.099Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAIwDAAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-11T09:27:51.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "dbo.Utilizadores [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Utilizadores.sql",
               "ToolTip": "dbo.Utilizadores [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-10T18:32:55.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T18:32:55.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\DTO\\LoginModel.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\LoginModel.cs",
@@ -141,22 +139,20 @@
               "RelativeToolTip": "Models\\DTO\\LoginModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T13:34:02.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T13:34:02.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "dbo.Orcamentos [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.Orcamentos.sql",
               "ToolTip": "dbo.Orcamentos [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-11T15:22:12.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T15:22:12.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UtilizadoresModel.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\DTO\\UtilizadoresModel.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\UtilizadoresModel.cs",
@@ -164,12 +160,11 @@
               "RelativeToolTip": "Models\\DTO\\UtilizadoresModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T20:49:31.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T20:49:31.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TblUtilizadoresController.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Controllers\\TblUtilizadoresController.cs",
               "RelativeDocumentMoniker": "Controllers\\TblUtilizadoresController.cs",
@@ -177,12 +172,11 @@
               "RelativeToolTip": "Controllers\\TblUtilizadoresController.cs",
               "ViewState": "AQIAAGIAAAAAAAAAAAAIwIYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T14:00:30.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T14:00:30.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TblUtilizadores.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\TblUtilizadores.cs",
               "RelativeDocumentMoniker": "Models\\TblUtilizadores.cs",
@@ -190,22 +184,20 @@
               "RelativeToolTip": "Models\\TblUtilizadores.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAIwB8AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T15:38:56.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T15:38:56.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "dbo.AspNetUsers [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_DWEB_NET_c6819a10_4753_48e1_948e_97a400b23043/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-10T17:04:30.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T17:04:30.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -213,12 +205,11 @@
               "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ViewState": "AQIAABsAAAAAAAAAAAAAABUAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-11T14:06:20.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T14:06:20.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ContaModel.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\DTO\\ContaModel.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\ContaModel.cs",
@@ -226,12 +217,11 @@
               "RelativeToolTip": "Models\\DTO\\ContaModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T21:54:57.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T21:54:57.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "TblOrcamentos.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\TblOrcamentos.cs",
               "RelativeDocumentMoniker": "Models\\TblOrcamentos.cs",
@@ -239,12 +229,11 @@
               "RelativeToolTip": "Models\\TblOrcamentos.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T15:02:53.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T15:02:53.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "OrcamentoModel.cs",
               "DocumentMoniker": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\Models\\DTO\\OrcamentoModel.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\OrcamentoModel.cs",
@@ -252,8 +241,7 @@
               "RelativeToolTip": "Models\\DTO\\OrcamentoModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T15:09:30.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T15:09:30.859Z"
             },
             {
               "$type": "Document",
@@ -265,8 +253,7 @@
               "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "ViewState": "AQIAAKYAAAAAAAAAAAAUwIMAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T16:46:00.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T16:46:00.995Z"
             },
             {
               "$type": "Document",
@@ -278,8 +265,7 @@
               "RelativeToolTip": "Models\\TblContas.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T15:46:03.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T15:46:03.239Z"
             },
             {
               "$type": "Document",
@@ -291,8 +277,7 @@
               "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ViewState": "AQIAABsAAAAAAAAAAAAAADIAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T14:57:43.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T14:57:43.257Z"
             },
             {
               "$type": "Document",
@@ -304,8 +289,7 @@
               "RelativeToolTip": "Views\\TblUtilizadores\\Create.cshtml",
               "ViewState": "AQIAABIAAAAAAAAAAAAAADEAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T14:03:12.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T14:03:12.038Z"
             }
           ]
         }

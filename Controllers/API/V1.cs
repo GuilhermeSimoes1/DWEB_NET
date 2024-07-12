@@ -333,26 +333,37 @@ namespace DWEB_NET.Controllers
 
         [HttpPost]
         [Route("Contas")]
-        public async Task<IActionResult> AdicionarConta([FromBody] ContaModel model, [FromQuery] string OldEmail, [FromQuery] int UserID)
+        public async Task<IActionResult> AdicionarConta([FromBody] ContaModel model, [FromQuery] string OldEmail)
         {
             try
             {
+                // Obtém o usuário através do email
                 var resultUser = await _userManager.FindByEmailAsync(OldEmail);
                 if (resultUser == null)
                 {
                     return NotFound("User not found.");
                 }
 
+                // Obtém o usuário no contexto da aplicação
+                var user = _context.Utilizadores.FirstOrDefault(u => u.UserAutent == resultUser.Id);
+                if (user == null)
+                {
+                    return NotFound("User not found.");
+                }
+
+                // Usa o UserID do usuário autenticado
                 var novaConta = new TblContas
                 {
                     NomeConta = model.NomeConta,
                     Saldo = model.Saldo,
-                    UserFK = UserID
+                    UserFK = user.UserID
                 };
 
+                // Adiciona a nova conta ao contexto e salva as alterações
                 _context.Contas.Add(novaConta);
                 await _context.SaveChangesAsync();
 
+                // Retorna os detalhes da conta adicionada
                 return Ok(new
                 {
                     contaId = novaConta.ContaID,
@@ -361,14 +372,17 @@ namespace DWEB_NET.Controllers
                     userFK = novaConta.UserFK,
                     message = "Conta adicionada com sucesso."
                 });
-
             }
             catch (Exception ex)
             {
+                // Loga o erro ocorrido
                 _logger.LogError($"An error occurred while adding account: {ex.Message}");
+
+                // Retorna um erro interno do servidor com uma mensagem apropriada
                 return StatusCode(500, new { message = "Failed to add account. Please try again." });
             }
         }
+
 
 
 
