@@ -33,11 +33,26 @@ namespace DWEB_NET.Controllers
         {
             try
             {
+               
                 var user = _context.Utilizadores.FirstOrDefault(u => u.UserID == userId);
-
                 if (user == null)
                 {
                     return NotFound("User not found.");
+                }
+               
+                if (user.IsAdmin)
+                {
+                    
+                    var orcamentosAdmin = _context.Orcamentos.Select(o => new
+                    {
+                        o.OrcamentoID,
+                        o.NomeOrcamento,
+                        o.ValorNecessario,
+                        o.DataInicial,
+                        o.DataFinal,
+                        o.ValorAtual
+                    }).ToList();
+                    return Ok(orcamentosAdmin);
                 }
 
                 var orcamentos = _context.Orcamentos
@@ -57,10 +72,12 @@ namespace DWEB_NET.Controllers
             }
             catch (Exception ex)
             {
+                
                 _logger.LogError($"An error occurred while retrieving budgets: {ex.Message}");
                 return StatusCode(500, new { message = "Failed to retrieve budgets. Please try again." });
             }
         }
+
 
         [HttpPost]
         [Route("Orcamentos")]
@@ -270,6 +287,17 @@ namespace DWEB_NET.Controllers
         {
             try
             {
+                if (_context.Utilizadores.Any(u => u.UserID == userFK && u.IsAdmin))
+                {
+                    var contasAdmin = _context.Contas.Select(c => new
+                    {
+                        c.ContaID,
+                        c.NomeConta,
+                        c.Saldo,
+                        c.UserFK
+                    }).ToList();
+                    return Ok(contasAdmin);
+                }
                 var contas = _context.Contas.Where(c => c.UserFK == userFK).ToList();
                 return Ok(contas);
             }
@@ -412,6 +440,11 @@ namespace DWEB_NET.Controllers
                 user.FirstName = model.FirstName;
                 user.LastName = model.LastName;
                 user.UserAutent = resultUser.Id;
+
+                resultUser.UserName = user.UserName;
+                resultUser.Email = user.Email;
+                resultUser.NormalizedEmail = user.Email.ToUpper();
+                resultUser.NormalizedUserName = user.UserName.ToUpper();
 
                 _context.Utilizadores.Update(user);
                 await _context.SaveChangesAsync();
