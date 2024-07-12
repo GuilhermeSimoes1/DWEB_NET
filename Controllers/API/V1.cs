@@ -1,5 +1,4 @@
-﻿
-using DWEB_NET.Data;
+﻿using DWEB_NET.Data;
 using DWEB_NET.Models;
 using DWEB_NET.Models.DTO;
 using Microsoft.AspNetCore.Identity;
@@ -9,120 +8,408 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-[Route("api/[controller]")]
-[ApiController]
-public class V1Controller : ControllerBase
+namespace DWEB_NET.Controllers
 {
-    private readonly ApplicationDbContext _context;
-    private readonly SignInManager<IdentityUser> _signInManager;
-    private readonly UserManager<IdentityUser> _userManager;
-    private readonly ILogger<V1Controller> _logger;
-
-    public V1Controller(ApplicationDbContext context, SignInManager<IdentityUser> signInManager, ILogger<V1Controller> logger, UserManager<IdentityUser> userManager)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class V1Controller : ControllerBase
     {
-        _context = context;
-        _signInManager = signInManager;
-        _logger = logger;
-        _userManager = userManager;
-    }
+        private readonly ApplicationDbContext _context;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly ILogger<V1Controller> _logger;
 
-    [HttpPost]
-    [Route("Login")]
-    public async Task<IActionResult> Login([FromBody] LoginModel ola)
-    {
-        if (string.IsNullOrEmpty(ola.Email) || string.IsNullOrEmpty(ola.Password))
+        public V1Controller(ApplicationDbContext context, SignInManager<IdentityUser> signInManager, ILogger<V1Controller> logger, UserManager<IdentityUser> userManager)
         {
-            return BadRequest("Invalid login request.");
+            _context = context;
+            _signInManager = signInManager;
+            _logger = logger;
+            _userManager = userManager;
         }
 
-        try
+        [HttpGet]
+        [Route("Orcamentos/{userId}")]
+        public IActionResult GetOrcamentos(int userId)
         {
-            var resultUser = await _userManager.FindByEmailAsync(ola.Email);
-
-            if (resultUser != null)
+            try
             {
-                var passWorks = new PasswordHasher<IdentityUser>().VerifyHashedPassword(resultUser, resultUser.PasswordHash, ola.Password);
+                var user = _context.Utilizadores.FirstOrDefault(u => u.UserID == userId);
 
-                if (passWorks == PasswordVerificationResult.Success)
+                if (user == null)
                 {
-                    await _signInManager.SignInAsync(resultUser, ola.RememberMe); 
+                    return NotFound("User not found.");
+                }
 
-                    var user = _context.Utilizadores.FirstOrDefault(u => u.UserAutent == resultUser.Id);
-
-                    if (user != null)
+                var orcamentos = _context.Orcamentos
+                    .Where(o => o.UserFK == userId)
+                    .Select(o => new
                     {
-                        return Ok(user);
+                        o.OrcamentoID,
+                        o.NomeOrcamento,
+                        o.ValorNecessario,
+                        o.DataInicial,
+                        o.DataFinal,
+                        o.ValorAtual
+                    })
+                    .ToList();
+
+                return Ok(orcamentos);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"An error occurred while retrieving budgets: {ex.Message}");
+                return StatusCode(500, new { message = "Failed to retrieve budgets. Please try again." });
+            }
+        }
+
+        [HttpPost]
+        [Route("Orcamentos")]
+        public IActionResult AdicionarOrcamento([FromBody] OrcamentoModel model)
+        {
+            try
+            {
+                var user = _context.Utilizadores.FirstOrDefault(u => u.UserID == model.UserFK);
+                if (user == null)
+                {
+                    return NotFound("User not found.");
+                }
+                var user2 = new TblUtilizadores
+                {
+                    UserID = model.UserFK
+                };
+
+                var novoOrcamento = new TblOrcamentos
+                {
+                    NomeOrcamento = model.NomeOrcamento,
+                    ValorNecessario = model.ValorNecessario,
+                    DataInicial = model.DataInicial,
+                    DataFinal = model.DataFinal,
+                    ValorAtual = model.ValorAtual,
+                    UserFK = user2.UserID
+                };
+
+                _context.Orcamentos.Add(novoOrcamento);
+                _context.SaveChanges();
+
+                return Ok(new { 
+                    orcamentoId = novoOrcamento.OrcamentoID,
+                    nomeOrcamento = novoOrcamento.NomeOrcamento,
+                    valorNecessario = novoOrcamento.ValorNecessario, 
+                    dataInicial = novoOrcamento.DataInicial,  
+                    datafinal = novoOrcamento.DataFinal,
+                    valorAtual = novoOrcamento.ValorAtual,
+                    userFK = novoOrcamento.UserFK,
+                    message = "Orçamento adicionado com sucesso." });
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"An error occurred while adding budget: {ex.Message}");
+                return StatusCode(500, new { message = "Failed to add budget. Please try again." });
+            }
+        }
+
+        [HttpPut]
+        [Route("Orcamentos/{orcamentoId}")]
+        public IActionResult EditarOrcamento(int orcamentoId, [FromBody] OrcamentoModel model)
+        {
+            try
+            {
+                var orcamento = _context.Orcamentos.FirstOrDefault(o => o.OrcamentoID == orcamentoId);
+                if (orcamento == null)
+                {
+                    return NotFound("Budget not found.");
+                }
+
+                orcamento.NomeOrcamento = model.NomeOrcamento;
+                orcamento.ValorNecessario = model.ValorNecessario;
+                orcamento.DataInicial = model.DataInicial;
+                orcamento.DataFinal = model.DataFinal;
+                orcamento.ValorAtual = model.ValorAtual;
+
+                _context.SaveChanges();
+
+                return Ok(new { message = "Orçamento atualizado com sucesso." });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"An error occurred while updating budget: {ex.Message}");
+                return StatusCode(500, new { message = "Failed to update budget. Please try again." });
+            }
+        }
+
+        [HttpDelete]
+        [Route("Orcamentos/{orcamentoId}")]
+        public IActionResult ExcluirOrcamento(int orcamentoId)
+        {
+            try
+            {
+                var orcamento = _context.Orcamentos.FirstOrDefault(o => o.OrcamentoID == orcamentoId);
+                if (orcamento == null)
+                {
+                    return NotFound("Budget not found.");
+                }
+
+                _context.Orcamentos.Remove(orcamento);
+                _context.SaveChanges();
+
+                return Ok(new { message = "Orçamento excluído com sucesso." });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"An error occurred while deleting budget: {ex.Message}");
+                return StatusCode(500, new { message = "Failed to delete budget. Please try again." });
+            }
+        }
+
+        [HttpPost]
+        [Route("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        {
+            if (string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.Password))
+            {
+                return BadRequest("Invalid login request.");
+            }
+
+            try
+            {
+                var resultUser = await _userManager.FindByEmailAsync(model.Email);
+
+                if (resultUser != null)
+                {
+                    var passWorks = new PasswordHasher<IdentityUser>().VerifyHashedPassword(resultUser, resultUser.PasswordHash, model.Password);
+
+                    if (passWorks == PasswordVerificationResult.Success)
+                    {
+                        await _signInManager.SignInAsync(resultUser, model.RememberMe);
+
+                        var user = _context.Utilizadores.FirstOrDefault(u => u.UserAutent == resultUser.Id);
+
+                        if (user != null)
+                        {
+                            return Ok(user);
+                        }
+                        else
+                        {
+                            return BadRequest("User details not found");
+                        }
                     }
                     else
                     {
-                        return BadRequest("User details not found");
+                        return BadRequest("Invalid password");
                     }
                 }
                 else
                 {
-                    return BadRequest("Invalid password");
+                    return BadRequest("User not found");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                return BadRequest("User not found");
+                return BadRequest(ex.Message);
             }
         }
-        catch (Exception ex)
+
+        [HttpPost]
+        [Route("Register")]
+        public async Task<IActionResult> Register([FromBody] TblUtilizadores model)
         {
-            return BadRequest(ex.Message); 
-        }
-    }
-
-    [HttpPost]
-    [Route("Register")]
-    public async Task<IActionResult> Register([FromBody] TblUtilizadores model)
-    {
-        try
-        {
-            var user = new IdentityUser { 
-                UserName = model.UserName, 
-                Email = model.Email,
-                Id = Guid.NewGuid().ToString(),
-                EmailConfirmed = true
-            };
-
-            var result = await _userManager.CreateAsync(user, model.Password); 
-
-            if (result.Succeeded)
+            try
             {
-                _logger.LogInformation("User created a new account with password.");
-
-                var tblUtilizadores = new TblUtilizadores
+                var user = new IdentityUser
                 {
-                    UserAutent = user.Id,
                     UserName = model.UserName,
                     Email = model.Email,
-                    Password = user.PasswordHash,
-                    FirstName = model.UserName,
-                    LastName = model.UserName,
-                    IsAdmin = false,
-                    Descricao = model.Descricao
+                    Id = Guid.NewGuid().ToString(),
+                    EmailConfirmed = true
                 };
 
-                _context.Utilizadores.Add(tblUtilizadores);
-                await _context.SaveChangesAsync();
-                return Ok(new { message = "Registration successful. Please confirm your email." });
-            }
+                var result = await _userManager.CreateAsync(user, model.Password);
 
-            foreach (var error in result.Errors)
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("User created a new account with password.");
+
+                    var tblUtilizadores = new TblUtilizadores
+                    {
+                        UserAutent = user.Id,
+                        UserName = model.UserName,
+                        Email = model.Email,
+                        Password = user.PasswordHash,
+                        FirstName = model.FirstName, // Assuming FirstName and LastName are available in model
+                        LastName = model.LastName,
+                        IsAdmin = false
+                        
+                    };
+
+                    _context.Utilizadores.Add(tblUtilizadores);
+                    await _context.SaveChangesAsync();
+                    return Ok(new { message = "Registration successful. Please confirm your email." });
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                _logger.LogError("Registration failed: " + string.Join("; ", errors));
+                return BadRequest(ModelState);
+            }
+            catch (Exception ex)
             {
-                ModelState.AddModelError(string.Empty, error.Description);
+                _logger.LogError($"An error occurred during registration: {ex.Message}");
+                return StatusCode(500, new { message = "An error occurred. Please try again." });
             }
+        }
 
-            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
-            _logger.LogError("Registration failed: " + string.Join("; ", errors));
-            return BadRequest(ModelState);
-        }
-        catch (Exception ex)
+
+        [HttpGet]
+        [Route("Contas")]
+        public IActionResult GetContas(int userFK)
         {
-            _logger.LogError($"An error occurred during registration: {ex.Message}");
-            return StatusCode(500, new { message = "An error occurred. Please try again." });
+            try
+            {
+                var contas = _context.Contas.Where(c => c.UserFK == userFK).ToList();
+                return Ok(contas);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao buscar as contas: {ex.Message}");
+                return StatusCode(500, "Erro interno ao buscar as contas. Por favor, tente novamente.");
+            }
         }
+
+
+        [HttpPut]
+        [Route("Contas/{contaId}")]
+        public IActionResult UpdateConta(int contaId, [FromBody] ContaModel model)
+        {
+            try
+            {
+                var conta = _context.Contas.FirstOrDefault(c => c.ContaID == contaId);
+                if (conta == null)
+                {
+                    return NotFound("Conta não encontrada.");
+                }
+
+                conta.NomeConta = model.NomeConta;
+                conta.Saldo = model.Saldo;
+
+                _context.SaveChanges();
+
+                return Ok(new { message = "Conta atualizada com sucesso." });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao atualizar a conta: {ex.Message}");
+                return StatusCode(500, new { message = "Falha ao atualizar a conta. Por favor, tente novamente." });
+            }
+        }
+
+        [HttpDelete]
+        [Route("Contas/{contaId}")]
+        public IActionResult DeleteConta(int contaId)
+        {
+            try
+            {
+                var conta = _context.Contas.FirstOrDefault(c => c.ContaID == contaId);
+                if (conta == null)
+                {
+                    return NotFound("Conta não encontrada.");
+                }
+
+                _context.Contas.Remove(conta);
+                _context.SaveChanges();
+
+                return Ok(new { message = "Conta excluída com sucesso." });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao excluir a conta: {ex.Message}");
+                return StatusCode(500, new { message = "Falha ao excluir a conta. Por favor, tente novamente." });
+            }
+        }
+
+        [HttpPost]
+        [Route("Contas")]
+        public async Task<IActionResult> AdicionarConta([FromBody] ContaModel model, [FromQuery] string OldEmail, [FromQuery] int UserID)
+        {
+            try
+            {
+                var resultUser = await _userManager.FindByEmailAsync(OldEmail);
+                if (resultUser == null)
+                {
+                    return NotFound("User not found.");
+                }
+
+                var novaConta = new TblContas
+                {
+                    NomeConta = model.NomeConta,
+                    Saldo = model.Saldo,
+                    UserFK = UserID
+                };
+
+                _context.Contas.Add(novaConta);
+                await _context.SaveChangesAsync();
+
+                return Ok(new
+                {
+                    contaId = novaConta.ContaID,
+                    nomeConta = novaConta.NomeConta,
+                    saldo = novaConta.Saldo,
+                    userFK = novaConta.UserFK,
+                    message = "Conta adicionada com sucesso."
+                });
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"An error occurred while adding account: {ex.Message}");
+                return StatusCode(500, new { message = "Failed to add account. Please try again." });
+            }
+        }
+
+
+
+        [HttpPut]
+        [Route("Utilizadores")]
+        public async Task<IActionResult> UpdateUtilizador([FromBody] TblUtilizadores model, [FromQuery] string UserFK, [FromQuery] string oldEmail)
+        {
+            try
+            {
+                var resultUser = await _userManager.FindByEmailAsync(oldEmail);
+
+                if (resultUser == null)
+                {
+                    return NotFound("User not found.");
+                }
+
+                var user = _context.Utilizadores.FirstOrDefault(u => u.UserAutent == resultUser.Id);
+
+                if (user == null)
+                {
+                    return NotFound("User not found.");
+                }
+
+
+                user.UserName = model.UserName;
+                user.Email = model.Email;
+                user.FirstName = model.FirstName;
+                user.LastName = model.LastName;
+                user.UserAutent = resultUser.Id;
+
+                _context.Utilizadores.Update(user);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { message = "User details updated successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Failed to update user details. Please try again." });
+            }
+        }
+
+
     }
 }
