@@ -54,7 +54,7 @@ namespace DWEB_NET.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
         {
-            if (ModelState.IsValid)
+            
             {
                 _context.Add(tblTransacoesCategorias);
                 await _context.SaveChangesAsync();

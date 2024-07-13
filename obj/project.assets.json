@@ -8602,19 +8602,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gui\\.nuget\\packages\\": {}
+    "C:\\Users\\afons\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\DWEB_NET.csproj",
+      "projectUniqueName": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\DWEB_NET.csproj",
       "projectName": "DWEB_NET",
-      "projectPath": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\DWEB_NET.csproj",
-      "packagesPath": "C:\\Users\\Gui\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gui\\OneDrive - Instituto Politécnico de Tomar\\Ambiente de Trabalho\\DWEB_NET\\DWEB_NET\\obj\\",
+      "projectPath": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\DWEB_NET.csproj",
+      "packagesPath": "C:\\Users\\afons\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\afons\\OneDrive\\Ambiente de Trabalho\\DWEB\\DWEB_NET\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\afons\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8699,7 +8699,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
