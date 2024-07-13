@@ -14,11 +14,25 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="TransacaoFK" />
             <input type="hidden" asp-for="CategoriaFK" />
+
+            <div class="form-group">
+                <label asp-for="Transacao.Descricao" class="control-label"></label>
+                <input asp-for="Transacao.Descricao" class="form-control" readonly />
+                <span asp-validation-for="Transacao.Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CategoriaFK" class="control-label">Categoria</label>
+                <select asp-for="CategoriaFK" class="form-control" asp-items="ViewBag.CategoriaFK"></select>
+                <span asp-validation-for="CategoriaFK" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <label asp-for="Valor" class="control-label"></label>
                 <input asp-for="Valor" class="form-control" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -31,5 +45,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

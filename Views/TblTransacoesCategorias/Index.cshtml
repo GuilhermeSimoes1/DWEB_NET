@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Transacao)
+                @Html.DisplayNameFor(model => model.Transacao.Descricao)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Categoria)
+                @Html.DisplayNameFor(model => model.Categoria.NomeCategoria)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Valor)
@@ -25,23 +25,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Transacao.TransacaoID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria.CategoriaID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Transacao.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria.NomeCategoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-transacaoFK="@item.TransacaoFK" asp-route-categoriaFK="@item.CategoriaFK" class="btn btn-warning" style="margin-left: 10px;">Editar</a>
+                    <a asp-action="Details" asp-route-transacaoFK="@item.TransacaoFK" asp-route-categoriaFK="@item.CategoriaFK" class="btn btn-info" style="margin-left: 10px;">Detalhes</a>
+                    <a asp-action="Delete" asp-route-transacaoFK="@item.TransacaoFK" asp-route-categoriaFK="@item.CategoriaFK" class="btn btn-danger" style="margin-left: 10px;">Apagar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

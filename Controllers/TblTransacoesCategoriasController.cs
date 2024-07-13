@@ -26,18 +26,13 @@ namespace DWEB_NET.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: TblTransacoesCategorias/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: TblTransacoesCategorias/Details
+        public async Task<IActionResult> Details(int transacaoFK, int categoriaFK)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var tblTransacoesCategorias = await _context.TransacoesCategorias
                 .Include(t => t.Categoria)
                 .Include(t => t.Transacao)
-                .FirstOrDefaultAsync(m => m.TransacaoFK == id);
+                .FirstOrDefaultAsync(m => m.TransacaoFK == transacaoFK && m.CategoriaFK == categoriaFK);
             if (tblTransacoesCategorias == null)
             {
                 return NotFound();
@@ -49,14 +44,12 @@ namespace DWEB_NET.Controllers
         // GET: TblTransacoesCategorias/Create
         public IActionResult Create()
         {
-            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "CategoriaID");
-            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "TransacaoID");
+            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria");
+            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "Descricao");
             return View();
         }
 
         // POST: TblTransacoesCategorias/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
@@ -67,51 +60,73 @@ namespace DWEB_NET.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "CategoriaID", tblTransacoesCategorias.CategoriaFK);
-            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "TransacaoID", tblTransacoesCategorias.TransacaoFK);
+            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria", tblTransacoesCategorias.CategoriaFK);
+            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "Descricao", tblTransacoesCategorias.TransacaoFK);
             return View(tblTransacoesCategorias);
         }
 
-        // GET: TblTransacoesCategorias/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: TblTransacoesCategorias/Edit
+        public async Task<IActionResult> Edit(int transacaoFK, int categoriaFK)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var tblTransacoesCategorias = await _context.TransacoesCategorias
+                .Include(t => t.Categoria)
+                .Include(t => t.Transacao)
+                .FirstOrDefaultAsync(m => m.TransacaoFK == transacaoFK && m.CategoriaFK == categoriaFK);
 
-            var tblTransacoesCategorias = await _context.TransacoesCategorias.FindAsync(id);
             if (tblTransacoesCategorias == null)
             {
                 return NotFound();
             }
-            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "CategoriaID", tblTransacoesCategorias.CategoriaFK);
-            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "TransacaoID", tblTransacoesCategorias.TransacaoFK);
+
+            // Carrega as categorias disponíveis para o dropdown
+            ViewBag.Categorias = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria", tblTransacoesCategorias.CategoriaFK);
+
             return View(tblTransacoesCategorias);
         }
 
-        // POST: TblTransacoesCategorias/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+        // POST: TblTransacoesCategorias/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
+        public async Task<IActionResult> Edit(int transacaoFK, int categoriaFK, [Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
         {
-            if (id != tblTransacoesCategorias.TransacaoFK)
+            if (transacaoFK != tblTransacoesCategorias.TransacaoFK || categoriaFK != tblTransacoesCategorias.CategoriaFK)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+           
                 try
                 {
-                    _context.Update(tblTransacoesCategorias);
+                    // Carrega a entidade existente do banco de dados
+                    var existingEntity = await _context.TransacoesCategorias
+                        .Include(t => t.Transacao)
+                        .Include(t => t.Categoria)
+                        .FirstOrDefaultAsync(m => m.TransacaoFK == transacaoFK && m.CategoriaFK == categoriaFK);
+
+                    if (existingEntity == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Atualiza as propriedades da entidade existente
+                    existingEntity.CategoriaFK = tblTransacoesCategorias.CategoriaFK;
+                    existingEntity.Valor = tblTransacoesCategorias.Valor;
+
+                    // Atualiza o valor da transação associada
+                    var transacao = await _context.Transacoes.FindAsync(transacaoFK);
+                    if (transacao != null)
+                    {
+                        transacao.ValorTransacao = tblTransacoesCategorias.Valor;
+                        _context.Update(transacao);
+                    }
+
+                    // Salva as alterações
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TblTransacoesCategoriasExists(tblTransacoesCategorias.TransacaoFK))
+                    if (!TblTransacoesCategoriasExists(tblTransacoesCategorias.TransacaoFK, tblTransacoesCategorias.CategoriaFK))
                     {
                         return NotFound();
                     }
@@ -121,24 +136,20 @@ namespace DWEB_NET.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "CategoriaID", tblTransacoesCategorias.CategoriaFK);
-            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "TransacaoID", tblTransacoesCategorias.TransacaoFK);
+        
+            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria", tblTransacoesCategorias.CategoriaFK);
+            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "Descricao", tblTransacoesCategorias.TransacaoFK);
             return View(tblTransacoesCategorias);
         }
 
-        // GET: TblTransacoesCategorias/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
+        // GET: TblTransacoesCategorias/Delete
+        public async Task<IActionResult> Delete(int transacaoFK, int categoriaFK)
+        {
             var tblTransacoesCategorias = await _context.TransacoesCategorias
                 .Include(t => t.Categoria)
                 .Include(t => t.Transacao)
-                .FirstOrDefaultAsync(m => m.TransacaoFK == id);
+                .FirstOrDefaultAsync(m => m.TransacaoFK == transacaoFK && m.CategoriaFK == categoriaFK);
             if (tblTransacoesCategorias == null)
             {
                 return NotFound();
@@ -147,24 +158,27 @@ namespace DWEB_NET.Controllers
             return View(tblTransacoesCategorias);
         }
 
-        // POST: TblTransacoesCategorias/Delete/5
+        // POST: TblTransacoesCategorias/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int transacaoFK, int categoriaFK)
         {
-            var tblTransacoesCategorias = await _context.TransacoesCategorias.FindAsync(id);
+            var tblTransacoesCategorias = await _context.TransacoesCategorias
+                .FirstOrDefaultAsync(m => m.TransacaoFK == transacaoFK && m.CategoriaFK == categoriaFK);
             if (tblTransacoesCategorias != null)
             {
                 _context.TransacoesCategorias.Remove(tblTransacoesCategorias);
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TblTransacoesCategoriasExists(int id)
+        private bool TblTransacoesCategoriasExists(int transacaoFK, int categoriaFK)
         {
-            return _context.TransacoesCategorias.Any(e => e.TransacaoFK == id);
+            return _context.TransacoesCategorias.Any(e => e.TransacaoFK == transacaoFK && e.CategoriaFK == categoriaFK);
         }
+
+        //FUNÇÕES USADAS NO EDIT
+
     }
 }
