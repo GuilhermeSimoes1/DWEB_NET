@@ -335,6 +335,8 @@ namespace DWEB_NET.Controllers
                 return NotFound("User not found.");
             }
 
+
+
             var accounts = await _context.Contas
                 .Where(c => c.UserFK == user.UserID)
                 .Select(c => new
@@ -351,14 +353,20 @@ namespace DWEB_NET.Controllers
         [HttpGet("GetHistoricoTransacoes")]
         public async Task<IActionResult> GetHistoricoTransacoes([FromQuery] int userId)
         {
-            if (userId <= 0)
+
+            var user = await _context.Utilizadores.FirstOrDefaultAsync(u => u.UserID == userId);
+
+
+            if (user == null)
             {
-                return BadRequest("Invalid user ID");
+                return NotFound("User not found.");
             }
 
-            var transacoes = await _context.Transacoes
-                .Where(t => t.UserFK == userId)
-                .Select(t => new
+            if (user.IsAdmin)
+            {
+
+
+                var transacoesAdmin = await _context.Transacoes.Select(t => new
                 {
                     t.TransacaoID,
                     t.ValorTransacao,
@@ -367,8 +375,28 @@ namespace DWEB_NET.Controllers
                     t.DataTime,
                     Conta = t.Conta.NomeConta,
                     Email = t.User.Email
-
                 }).ToListAsync();
+
+                if (!transacoesAdmin.Any())
+                {
+                    return NotFound("No transactions found for the given user ID");
+                }
+
+                return Ok(transacoesAdmin);
+            }
+
+            var transacoes = await _context.Transacoes
+                    .Where(t => t.UserFK == userId)
+                    .Select(t => new
+                    {
+                        t.TransacaoID,
+                        t.ValorTransacao,
+                        t.TipoTransacao,
+                        t.Descricao,
+                        t.DataTime,
+                        Conta = t.Conta.NomeConta,
+                        Email = t.User.Email
+                    }).ToListAsync();
 
             if (!transacoes.Any())
             {
@@ -377,6 +405,7 @@ namespace DWEB_NET.Controllers
 
             return Ok(transacoes);
         }
+
 
 
         [HttpPost]
