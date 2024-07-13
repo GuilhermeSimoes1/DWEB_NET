@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DWEB_NET.Data;
 using DWEB_NET.Models;
+using DWEB_NET.Models.DTO;
 
 namespace DWEB_NET.Controllers
 {
@@ -54,8 +55,19 @@ namespace DWEB_NET.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
         {
-            
+           
             {
+                var transacao = await _context.Transacoes.FindAsync(tblTransacoesCategorias.TransacaoFK);
+                var categoria = await _context.Categorias.FindAsync(tblTransacoesCategorias.CategoriaFK);
+
+                if (transacao == null || categoria == null)
+                {
+                    ModelState.AddModelError("", "A transação ou a categoria especificada não existe.");
+                    ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria", tblTransacoesCategorias.CategoriaFK);
+                    ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "Descricao", tblTransacoesCategorias.TransacaoFK);
+                    return View(tblTransacoesCategorias);
+                }
+
                 _context.Add(tblTransacoesCategorias);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -78,9 +90,7 @@ namespace DWEB_NET.Controllers
                 return NotFound();
             }
 
-            // Carrega as categorias disponíveis para o dropdown
-            ViewBag.Categorias = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria", tblTransacoesCategorias.CategoriaFK);
-
+            ViewData["Categorias"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria", tblTransacoesCategorias.CategoriaFK);
             return View(tblTransacoesCategorias);
         }
 
@@ -88,20 +98,19 @@ namespace DWEB_NET.Controllers
         // POST: TblTransacoesCategorias/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int transacaoFK, int categoriaFK, [Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias)
+        public async Task<IActionResult> Edit(int transacaoFK, int categoriaFK, [Bind("TransacaoFK,CategoriaFK,Valor")] TblTransacoesCategorias tblTransacoesCategorias, TransacoesModel model)
         {
             if (transacaoFK != tblTransacoesCategorias.TransacaoFK || categoriaFK != tblTransacoesCategorias.CategoriaFK)
             {
                 return NotFound();
             }
 
-           
-                try
+            try
+            {
+                
                 {
-                    // Carrega a entidade existente do banco de dados
+                    // Busca a entidade existente no banco de dados
                     var existingEntity = await _context.TransacoesCategorias
-                        .Include(t => t.Transacao)
-                        .Include(t => t.Categoria)
                         .FirstOrDefaultAsync(m => m.TransacaoFK == transacaoFK && m.CategoriaFK == categoriaFK);
 
                     if (existingEntity == null)
@@ -113,7 +122,14 @@ namespace DWEB_NET.Controllers
                     existingEntity.CategoriaFK = tblTransacoesCategorias.CategoriaFK;
                     existingEntity.Valor = tblTransacoesCategorias.Valor;
 
-                    // Atualiza o valor da transação associada
+                    // Verifica se houve mudança na categoria e atualiza se necessário
+                    if (existingEntity.CategoriaFK != tblTransacoesCategorias.CategoriaFK)
+                    {
+                        existingEntity.CategoriaFK = tblTransacoesCategorias.CategoriaFK;
+                        existingEntity.Categoria = await _context.Categorias.FindAsync(tblTransacoesCategorias.CategoriaFK);
+                    }
+
+                    // Atualiza o valor da transação associada (se necessário)
                     var transacao = await _context.Transacoes.FindAsync(transacaoFK);
                     if (transacao != null)
                     {
@@ -122,24 +138,47 @@ namespace DWEB_NET.Controllers
                     }
 
                     // Salva as alterações
+                    _context.Update(existingEntity);
                     await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!TblTransacoesCategoriasExists(tblTransacoesCategorias.TransacaoFK, tblTransacoesCategorias.CategoriaFK))
                 {
-                    if (!TblTransacoesCategoriasExists(tblTransacoesCategorias.TransacaoFK, tblTransacoesCategorias.CategoriaFK))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return NotFound();
                 }
-                return RedirectToAction(nameof(Index));
-        
-            ViewData["CategoriaFK"] = new SelectList(_context.Categorias, "CategoriaID", "NomeCategoria", tblTransacoesCategorias.CategoriaFK);
-            ViewData["TransacaoFK"] = new SelectList(_context.Transacoes, "TransacaoID", "Descricao", tblTransacoesCategorias.TransacaoFK);
-            return View(tblTransacoesCategorias);
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+
+        private async Task AtualizarSaldoConta(int contaFK)
+        {
+            var conta = await _context.Contas.FindAsync(contaFK);
+            if (conta != null)
+            {
+                var transacoes = await _context.Transacoes
+                    .Where(t => t.ContaFK == contaFK)
+                    .Include(t => t.ListaTransacoesCategorias)
+                    .ToListAsync();
+
+                // Recalcular o saldo com base nas transações
+                conta.Saldo = transacoes.Sum(t => t.TipoTransacao == TblTransacoes.Tipo.Ganho ? t.ValorTransacao : -t.ValorTransacao);
+
+                _context.Update(conta);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        private bool TblTransacoesCategoriasExists(int transacaoFK, int categoriaFK)
+        {
+            return _context.TransacoesCategorias.Any(e => e.TransacaoFK == transacaoFK && e.CategoriaFK == categoriaFK);
         }
 
 
@@ -173,12 +212,6 @@ namespace DWEB_NET.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TblTransacoesCategoriasExists(int transacaoFK, int categoriaFK)
-        {
-            return _context.TransacoesCategorias.Any(e => e.TransacaoFK == transacaoFK && e.CategoriaFK == categoriaFK);
-        }
-
-        //FUNÇÕES USADAS NO EDIT
-
+        
     }
 }

@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="TransacaoFK" />
             <input type="hidden" asp-for="CategoriaFK" />
@@ -23,7 +23,7 @@
 
             <div class="form-group">
                 <label asp-for="CategoriaFK" class="control-label">Categoria</label>
-                <select asp-for="CategoriaFK" class="form-control" asp-items="ViewBag.CategoriaFK"></select>
+                <select asp-for="CategoriaFK" class="form-control" asp-items="ViewBag.Categorias"></select>
                 <span asp-validation-for="CategoriaFK" class="text-danger"></span>
             </div>
 
